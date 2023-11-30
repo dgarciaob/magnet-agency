@@ -14,14 +14,14 @@ const Navbar = () => {
     <>
       <MaxWidthWrapper className="pt-8">
         {/* Desktop Navbar */}
-        <div className="lg:flex lg:flex-row justify-between align-middle items-center">
+        <div className="md:flex md:flex-row hidden justify-between align-middle items-center">
           <Image
             src="/logos/white-logo.svg"
             alt="magnet logo"
             width={90}
             height={90}
           />
-          <div className="hidden lg:flex flex-row space-x-28 font-lufgaBold">
+          <div className="hidden md:flex flex-row space-x-28 font-lufgaBold">
             {navscreen.map((navscreen) => {
               return (
                 <div
@@ -36,7 +36,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Navbar */}
-        <div className="lg:hidden ">
+        <div className="md:hidden ">
           <Sheet>
             <SheetTrigger>
               <Image
