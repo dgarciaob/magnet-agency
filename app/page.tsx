@@ -10,14 +10,7 @@ export default function Home() {
         {/* Logo, Hero & CTA */}
         <div>
           {/* TODO: Agregar animación al logo pequeño con Framer Motion */}
-          <Image
-            src="/logos/white-logo.svg"
-            alt="magnet logo"
-            width={90}
-            height={90}
-            className="lg:mb-48"
-          />
-          <div>
+          <div className="lg:mt-32">
             <h1 className="font-lufgaBold lg:text-6xl lg:mb-16">
               el partner digital <br />
               de tu siguiente <br />

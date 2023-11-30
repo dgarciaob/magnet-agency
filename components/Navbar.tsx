@@ -1,10 +1,10 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 
-import MaxWidthWrapper from "./MaxWidthWrapper";
-import { navscreen } from "@/navscreens/navscreens";
+import MaxWidthWrapper from './MaxWidthWrapper';
+import { navscreen } from '@/navscreens/navscreens';
 
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 const Navbar = () => {
   const date = new Date();
@@ -14,17 +14,25 @@ const Navbar = () => {
     <>
       <MaxWidthWrapper className="pt-8">
         {/* Desktop Navbar */}
-        <div className="hidden lg:flex flex-row justify-end space-x-28 font-lufgaBold">
-          {navscreen.map((navscreen) => {
-            return (
-              <div
-                key={navscreen.name}
-                className="transition ease-in-out hover:text-[#5746F4] hover:scale-110 hover:-translate-y-1"
-              >
-                <Link href={navscreen.linkTo}>{navscreen.name}</Link>
-              </div>
-            );
-          })}
+        <div className="lg:flex lg:flex-row justify-between align-middle items-center">
+          <Image
+            src="/logos/white-logo.svg"
+            alt="magnet logo"
+            width={90}
+            height={90}
+          />
+          <div className="hidden lg:flex flex-row space-x-28 font-lufgaBold">
+            {navscreen.map((navscreen) => {
+              return (
+                <div
+                  key={navscreen.name}
+                  className="transition ease-in-out duration-300 hover:text-[#5746F4] hover:scale-110 hover:-translate-y-1"
+                >
+                  <Link href={navscreen.linkTo}>{navscreen.name}</Link>
+                </div>
+              );
+            })}
+          </div>
         </div>
 
         {/* Mobile Navbar */}
