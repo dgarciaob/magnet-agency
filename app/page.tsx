@@ -9,17 +9,10 @@ import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import React, { useState, useRef } from 'react';
+import ProyectCarousel from '@/components/ProyectCarousel';
 
 export default function Home() {
-  const positionRef = useRef<HTMLDivElement>(null);
-
-  const handleScrollRight = () => {
-    if (positionRef.current) {
-      let xAxis = positionRef.current.scrollLeft;
-      xAxis += 530;
-      positionRef.current.scrollLeft = xAxis;
-    }
-  };
+  const carouselRef = useRef<HTMLDivElement>(null);
 
   return (
     <>
@@ -62,7 +55,7 @@ export default function Home() {
               className="4xl:w-[1600px] 2xl:w-[1400px] xl:w-[1200px] lg:w-[1000px] md:w-[800px]"
               drag
               dragSnapToOrigin
-              dragElastic={0.3}
+              dragElastic={0.4}
               dragConstraints={{ right: 0, left: 0, top: 0, bottom: 0 }}
               src="/images/MagnetHero.png"
             />
@@ -82,42 +75,14 @@ export default function Home() {
                   <ArrowLeft className="cursor-pointer" />
                 </button>
 
-                <button
-                  className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer"
-                  onClick={handleScrollRight}
-                >
+                <button className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer">
                   <ArrowRight className="cursor-pointer" />
                 </button>
               </div>
             </div>
           </div>
 
-          <ScrollArea>
-            <div className="flex flex-row space-x-8">
-              <div
-                className="w-[530px] h-[585px] rounded-[50px] bg-gradient-to-b from-[#ffb103] to-[#ffcc34] p-2 cursor-pointer"
-                ref={positionRef}
-              >
-                <div className="flex h-full w-full items-center justify-center bg-[#FFD747] back rounded-[43px]"></div>
-              </div>
-              <div className="w-[530px] h-[585px] rounded-[50px] bg-gradient-to-b from-[#ffb103] to-[#ffcc34] p-2 cursor-pointer">
-                <div className="flex h-full w-full items-center justify-center bg-[#FFD747] back rounded-[43px]"></div>
-              </div>
-              <div className="w-[530px] h-[585px] rounded-[50px] bg-gradient-to-b from-[#ffb103] to-[#ffcc34] p-2 cursor-pointer">
-                <div className="flex h-full w-full items-center justify-center bg-[#FFD747] back rounded-[43px]"></div>
-              </div>
-              <div className="w-[530px] h-[585px] rounded-[50px] bg-gradient-to-b from-[#ffb103] to-[#ffcc34] p-2 cursor-pointer">
-                <div className="flex h-full w-full items-center justify-center bg-[#FFD747] back rounded-[43px]"></div>
-              </div>
-              <div className="w-[530px] h-[585px] rounded-[50px] bg-gradient-to-b from-[#ffb103] to-[#ffcc34] p-2 cursor-pointer">
-                <div className="flex h-full w-full items-center justify-center bg-[#FFD747] back rounded-[43px]"></div>
-              </div>
-              <div className="w-[530px] h-[585px] rounded-[50px] bg-gradient-to-b from-[#ffb103] to-[#ffcc34] p-2 cursor-pointer">
-                <div className="flex h-full w-full items-center justify-center bg-[#FFD747] back rounded-[43px]"></div>
-              </div>
-            </div>
-            <ScrollBar orientation="horizontal" />
-          </ScrollArea>
+          <ProyectCarousel />
         </div>
 
         {/* Servicios */}
@@ -133,10 +98,7 @@ export default function Home() {
                   <ArrowLeft className="cursor-pointer" />
                 </button>
 
-                <button
-                  className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer"
-                  onClick={handleScrollRight}
-                >
+                <button className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer">
                   <ArrowRight className="cursor-pointer" />
                 </button>
               </div>
@@ -171,10 +133,7 @@ export default function Home() {
                   <ArrowLeft className="cursor-pointer" />
                 </button>
 
-                <button
-                  className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer"
-                  onClick={handleScrollRight}
-                >
+                <button className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer">
                   <ArrowRight className="cursor-pointer" />
                 </button>
               </div>

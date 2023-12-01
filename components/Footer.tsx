@@ -5,8 +5,8 @@ import Image from 'next/image';
 function Footer() {
   const year = new Date().getFullYear();
   return (
-    <div className="mt-20 bg-[#5746F4] rounded-t-xl">
-      <footer className="p-4 sm:p-6">
+    <div className="mt-20 bg-[#5746F4] rounded-t-3xl">
+      <footer className="p-4 sm:p-8">
         <div className="mx-auto max-w-screen-xl">
           <div className="md:flex md:justify-between">
             <div className="mb-8 md:mb-0">
