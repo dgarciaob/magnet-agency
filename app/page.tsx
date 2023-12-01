@@ -37,7 +37,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hidden md:block w-full ">
+        <div className="hidden md:block w-full">
           <motion.div
             className="w-40 h-40 bg-black absolute right-0"
             drag
