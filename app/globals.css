@@ -3,42 +3,49 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "LufgaRegular";
-  src: url("/fonts/Lufga-Regular.otf");
+  font-family: 'LufgaRegular';
+  src: url('/fonts/Lufga-Regular.otf');
 }
 
 .font-lufga {
-  font-family: "LufgaRegular", sans-serif;
+  font-family: 'LufgaRegular', sans-serif;
 }
 
 @font-face {
-  font-family: "LufgaBold";
-  src: url("/fonts/Lufga-Bold.otf");
+  font-family: 'LufgaBold';
+  src: url('/fonts/Lufga-Bold.otf');
 }
 
 .font-lufgaBold {
-  font-family: "LufgaBold", sans-serif;
+  font-family: 'LufgaBold', sans-serif;
 }
 
 @font-face {
-  font-family: "LufgaMedium";
-  src: url("/fonts/Lufga-Medium.otf");
+  font-family: 'LufgaMedium';
+  src: url('/fonts/Lufga-Medium.otf');
 }
 
 .font-lufgaMedium {
-  font-family: "LufgaMedium", sans-serif;
+  font-family: 'LufgaMedium', sans-serif;
 }
 
 @font-face {
-  font-family: "SF Pro Rounded";
+  font-family: 'SF Pro Rounded';
   font-style: normal;
   font-weight: 400;
-  src: local("SF Pro Rounded"), local("SFProRounded-Regular");
+  src: local('SF Pro Rounded'), local('SFProRounded-Regular');
 }
 
 .font-sfprorounded {
-  font-family: "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Helvetica, Arial, sans-serif;
+  font-family:
+    'SF Pro Rounded',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
 }
 
 @layer base {
