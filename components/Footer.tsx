@@ -14,8 +14,8 @@ function Footer() {
                 <Image
                   src="/logos/white-logo.svg"
                   className="mr-3"
-                  width={20}
-                  height={20}
+                  width={30}
+                  height={30}
                   alt="Magnet Logo"
                 />
                 <span className="font-lufgaBold font-extrabold self-center text-2xl whitespace-nowrap text-[#F6F5FF]">
