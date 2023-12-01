@@ -11,7 +11,7 @@ interface Props {
 const RouteTitle = (props: Props) => {
   return (
     <div
-      className={cn('flex flex-row space-x-2 font-lufgaBold lg:text-4xl mb-12')}
+      className={cn('flex flex-row space-x-2 font-lufgaBold lg:text-4xl mt-32')}
     >
       <h2>{props.title}.</h2>
       <p className="text-[#B4B2C4]">{props.description}.</p>

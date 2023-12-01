@@ -16,7 +16,7 @@ export default function Home() {
   const handleScrollRight = () => {
     if (positionRef.current) {
       let xAxis = positionRef.current.scrollLeft;
-      xAxis += 530; // Ajusta este valor según sea necesario
+      xAxis += 530;
       positionRef.current.scrollLeft = xAxis;
     }
   };
@@ -24,7 +24,10 @@ export default function Home() {
   return (
     <>
       <MaxWidthWrapper>
-        <div className="md:grid md:grid-cols-2 items-center pt-36 md:h-screen md:max-h-[950px] w-full">
+        <div
+          className="md:grid md:grid-cols-2 items-center pt-36 md:h-screen md:max-h-[950px] w-full"
+          id="inicio"
+        >
           {/* Logo, Hero & CTA */}
           <div>
             {/* TODO: Agregar animación al logo pequeño con Framer Motion */}
@@ -34,7 +37,7 @@ export default function Home() {
               gran idea
             </h1>
             <div className="md:space-x-5">
-              <Link href="#contacto" scroll={true} className="scroll-smooth">
+              <Link href="#contacto" scroll className="scroll-smooth">
                 <Button
                   variant="default"
                   className="font-lufgaMedium md:h-[72px] md:w-[200px] md:text-2xl"
@@ -67,11 +70,28 @@ export default function Home() {
         </div>
 
         {/* Proyectos */}
-        <div className="mt-[317px] mb-44" id="proyectos">
-          <RouteTitle
-            title="proyectos"
-            description="ideas convertidas en éxito"
-          />
+        <div className="mt-[200px] mb-44" id="proyectos">
+          <div className="flex flex-row justify-between items-center align-middle mb-4 mt-24">
+            <RouteTitle
+              title="proyectos"
+              description="ideas convertidas en éxito"
+            />
+            <div className="flex justify-end mt-32">
+              <div className="h-[56px] w-[120px] rounded-full bg-white flex items-center justify-between align-middle px-4">
+                <button className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer">
+                  <ArrowLeft className="cursor-pointer" />
+                </button>
+
+                <button
+                  className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer"
+                  onClick={handleScrollRight}
+                >
+                  <ArrowRight className="cursor-pointer" />
+                </button>
+              </div>
+            </div>
+          </div>
+
           <ScrollArea>
             <div className="flex flex-row space-x-8">
               <div
@@ -98,28 +118,30 @@ export default function Home() {
             </div>
             <ScrollBar orientation="horizontal" />
           </ScrollArea>
-          <div className="flex justify-end mt-6">
-            <div className="h-[56px] w-[120px] rounded-full bg-white flex items-center justify-between align-middle px-4">
-              <button className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer">
-                <ArrowLeft className="cursor-pointer" />
-              </button>
-
-              <button
-                className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer"
-                onClick={handleScrollRight}
-              >
-                <ArrowRight className="cursor-pointer" />
-              </button>
-            </div>
-          </div>
         </div>
 
         {/* Servicios */}
-        <div className="mt-[317px] mb-44">
-          <RouteTitle
-            title="servicios"
-            description="planes disponibles para tu negocio"
-          />
+        <div className="mt-[200px] mb-44">
+          <div className="flex flex-row justify-between items-center align-middle mb-4 mt-24">
+            <RouteTitle
+              title="servicios"
+              description="planes disponibles para tu negocio"
+            />
+            <div className="flex justify-end mt-32">
+              <div className="h-[56px] w-[120px] rounded-full bg-white flex items-center justify-between align-middle px-4">
+                <button className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer">
+                  <ArrowLeft className="cursor-pointer" />
+                </button>
+
+                <button
+                  className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer"
+                  onClick={handleScrollRight}
+                >
+                  <ArrowRight className="cursor-pointer" />
+                </button>
+              </div>
+            </div>
+          </div>
           <ScrollArea>
             <div className="flex flex-row space-x-8">
               <div className="w-[420px] h-[585px] rounded-[50px] bg-gradient-to-b from-[#ffb103] to-[#ffcc34] p-2 cursor-pointer">
@@ -134,25 +156,30 @@ export default function Home() {
             </div>
             <ScrollBar orientation="horizontal" />
           </ScrollArea>
-          <div className="flex justify-end mt-6">
-            <div className="h-[56px] w-[120px] rounded-full bg-white flex items-center justify-between align-middle px-4">
-              <button className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer">
-                <ArrowLeft className="cursor-pointer" />
-              </button>
-
-              <button className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer">
-                <ArrowRight className="cursor-pointer" />
-              </button>
-            </div>
-          </div>
         </div>
 
         {/* Proceso */}
-        <div className="mt-[317px] mb-44">
-          <RouteTitle
-            title="proceso"
-            description="nuestra aproximación al double diamond"
-          />
+        <div className="mt-[200px] mb-44">
+          <div className="flex flex-row justify-between items-center align-middle mb-4 mt-24">
+            <RouteTitle
+              title="proceso"
+              description="nuestra aproximación al double diamond"
+            />
+            <div className="flex justify-end mt-32">
+              <div className="h-[56px] w-[120px] rounded-full bg-white flex items-center justify-between align-middle px-4">
+                <button className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer">
+                  <ArrowLeft className="cursor-pointer" />
+                </button>
+
+                <button
+                  className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer"
+                  onClick={handleScrollRight}
+                >
+                  <ArrowRight className="cursor-pointer" />
+                </button>
+              </div>
+            </div>
+          </div>
           <ScrollArea>
             <div className="flex flex-row space-x-8">
               <div className="w-[420px] h-[585px] rounded-[50px] bg-gradient-to-b from-[#ffb103] to-[#ffcc34] p-2 cursor-pointer">
@@ -167,17 +194,6 @@ export default function Home() {
             </div>
             <ScrollBar orientation="horizontal" />
           </ScrollArea>
-          <div className="flex justify-end mt-6">
-            <div className="h-[56px] w-[120px] rounded-full bg-white flex items-center justify-between align-middle px-4">
-              <button className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer">
-                <ArrowLeft className="cursor-pointer" />
-              </button>
-
-              <button className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer">
-                <ArrowRight className="cursor-pointer" />
-              </button>
-            </div>
-          </div>
         </div>
 
         <Footer />

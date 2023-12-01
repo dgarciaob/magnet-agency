@@ -10,7 +10,7 @@ function Footer() {
         <div className="mx-auto max-w-screen-xl">
           <div className="md:flex md:justify-between">
             <div className="mb-8 md:mb-0">
-              <Link href="/" className="flex items-center">
+              <Link href="#inicio" className="flex items-center scroll-smooth">
                 <Image
                   src="/logos/white-logo.svg"
                   className="mr-3"
