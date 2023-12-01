@@ -3,6 +3,7 @@
 import * as React from 'react';
 import { SVGProps } from 'react';
 import { motion } from 'framer-motion';
+
 const FirstHeroSvg = (props: SVGProps<SVGSVGElement> & any) => {
   return (
     <motion.svg
