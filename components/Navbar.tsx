@@ -20,6 +20,7 @@ const Navbar = () => {
             alt="magnet logo"
             width={90}
             height={90}
+            priority
           />
           <div className="hidden md:flex flex-row space-x-28 font-lufgaBold">
             {navscreen.map((navscreen) => {
