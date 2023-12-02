@@ -8,8 +8,8 @@ import { motion } from 'framer-motion';
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
-import React, { useState, useRef } from 'react';
-import ServiceCarousel from '@/components/ServiceCarousel';
+import React from 'react';
+import ServiceSection from '@/components/ServiceSection';
 import '@/components/css/Page.css';
 import ProjectSection from '@/components/ProjectSection';
 
@@ -68,25 +68,8 @@ export default function Home() {
         </div>
 
         {/* Servicios */}
-        <div className="mt-[200px] mb-44">
-          <div className="flex flex-row justify-between items-center align-middle mb-4 mt-24">
-            <RouteTitle
-              title="servicios"
-              description="planes disponibles para tu negocio"
-            />
-            <div className="flex justify-end mt-32">
-              <div className="h-[56px] w-[120px] rounded-full bg-white flex items-center justify-between align-middle px-4">
-                <button className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer">
-                  <ArrowLeft className="cursor-pointer" />
-                </button>
-
-                <button className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer">
-                  <ArrowRight className="cursor-pointer" />
-                </button>
-              </div>
-            </div>
-          </div>
-          <ServiceCarousel />
+        <div className="mt-[200px] mb-44" id="servicios">
+          <ServiceSection />
         </div>
 
         {/* Proceso */}
