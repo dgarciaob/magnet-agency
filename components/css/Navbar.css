@@ -1,0 +1,14 @@
+.animate-navbar-slide-down {
+	animation: navbar-slide-down 1s ease-in-out;
+}
+
+@keyframes navbar-slide-down {
+	0% {
+		opacity: 0;
+		transform: translateY(-16px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
