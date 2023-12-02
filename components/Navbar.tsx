@@ -8,6 +8,7 @@ import '@/components/css/Navbar.css';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
+import { Menu } from 'lucide-react';
 
 const Navbar = () => {
   const date = new Date();
@@ -63,17 +64,29 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navbar */}
-      <div className="md:hidden ">
+      <div
+        className={cn(
+          'md:hidden z-50 animate-navbar-slide-down transition border-transparent duration-500 ease-in-out fixed p-4 w-full flex justify-between',
+          {
+            'border-b': !topOfPage,
+            'border-black/10': !topOfPage,
+            'backdrop-blur-md': !topOfPage,
+          },
+        )}
+      >
+        <Link href={'/'}>
+          <Image
+            src="/logos/white-logo.svg"
+            alt="magnet logo"
+            width={40}
+            height={40}
+          />
+        </Link>
         <Sheet>
-          <SheetTrigger>
-            <Image
-              src="/logos/white-logo.svg"
-              alt="magnet logo"
-              width={60}
-              height={60}
-            />
+          <SheetTrigger className="">
+            <Menu className="w-8 h-8" />
           </SheetTrigger>
-          <SheetContent side="left" className="w-[250px] bg-[#F6F5FF]">
+          <SheetContent side="right" className="w-[250px] bg-[#F6F5FF]">
             <div className="flex flex-row space-x-2 mb-20">
               <Image
                 src="/logos/black-logo.svg"
