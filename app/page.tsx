@@ -9,32 +9,31 @@ import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import React, { useState, useRef } from 'react';
-import ProyectCarousel from '@/components/ProyectCarousel';
 import ServiceCarousel from '@/components/ServiceCarousel';
+import '@/components/css/Page.css';
+import ProjectSection from '@/components/ProjectSection';
 
 export default function Home() {
-  const carouselRef = useRef<HTMLDivElement>(null);
-
   return (
     <>
       <MaxWidthWrapper>
         <div
-          className="md:grid md:grid-cols-2 items-center pt-36 md:h-screen md:max-h-[950px] w-full"
+          className=" md:grid md:grid-cols-2 flex flex-col items-center md:pt-36 pt-20 md:h-screen w-full"
           id="inicio"
         >
           {/* Logo, Hero & CTA */}
-          <div>
+          <div className="animate-hero-slide-up order-last">
             {/* TODO: Agregar animación al logo pequeño con Framer Motion */}
-            <h1 className="font-lufgaBold md:text-6xl md:mb-16">
+            <h1 className="font-lufgaBold sm:text-6xl text-5xl mb-16 sm:text-left text-center">
               el partner digital <br />
               de tu siguiente <br />
               gran idea
             </h1>
-            <div className="md:space-x-5">
-              <Link href="#contacto" scroll className="scroll-smooth">
+            <div className="md:space-x-5 space-y-5 flex flex-col md:block sm:px-0 px-8">
+              <Link href="#contacto" scroll className=" scroll-smooth">
                 <Button
                   variant="default"
-                  className="font-lufgaMedium md:h-[72px] md:w-[200px] md:text-2xl"
+                  className="font-lufgaMedium h-[72px] md:w-[200px] w-full text-2xl"
                 >
                   agendar cita
                 </Button>
@@ -43,7 +42,7 @@ export default function Home() {
               <Link href="#proyectos" className="scroll-smooth">
                 <Button
                   variant="secondary"
-                  className="font-lufgaMedium md:h-[72px] md:w-[200px] md:text-2xl"
+                  className="font-lufgaMedium h-[72px] md:w-[200px] w-full text-2xl "
                 >
                   descubre <ArrowDown className="ml-3" />
                 </Button>
@@ -51,9 +50,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hidden md:block absolute -right-1/4">
+          <div className="animate-magnet-fade-in md:absolute relative md:-right-1/4">
             <motion.img
-              className="4xl:w-[1600px] 2xl:w-[1400px] xl:w-[1200px] lg:w-[1000px] md:w-[800px]"
+              className="4xl:w-[1800px] 3xl:w-[1600px] 2xl:w-[1400px] xl:w-[1200px] lg:w-[900px] md:w-[800px] w-[600px]"
               drag
               dragSnapToOrigin
               dragElastic={0.4}
@@ -65,25 +64,7 @@ export default function Home() {
 
         {/* Proyectos */}
         <div className="mt-[200px] mb-44" id="proyectos">
-          <div className="flex flex-row justify-between items-center align-middle mb-4 mt-24">
-            <RouteTitle
-              title="proyectos"
-              description="ideas convertidas en éxito"
-            />
-            <div className="flex justify-end mt-32">
-              <div className="h-[56px] w-[120px] rounded-full bg-white flex items-center justify-between align-middle px-4">
-                <button className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer">
-                  <ArrowLeft className="cursor-pointer" />
-                </button>
-
-                <button className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer">
-                  <ArrowRight className="cursor-pointer" />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <ProyectCarousel />
+          <ProjectSection />
         </div>
 
         {/* Servicios */}

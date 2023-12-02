@@ -1,0 +1,27 @@
+.animate-hero-slide-up {
+	animation: hero-slide-up 1s ease-in-out;
+}
+
+.animate-magnet-fade-in {
+	animation: magnet-fade-in 1s ease-in-out;
+}
+
+@keyframes hero-slide-up {
+	0% {
+		opacity: 0;
+		transform: translateY(32px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes magnet-fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

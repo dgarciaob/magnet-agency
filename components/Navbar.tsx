@@ -3,10 +3,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import { navscreen } from '@/navscreens/navscreens';
+import '@/components/css/Navbar.css';
 
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
+import { Menu } from 'lucide-react';
 
 const Navbar = () => {
   const date = new Date();
@@ -31,25 +33,28 @@ const Navbar = () => {
       {/* Desktop Navbar */}
       <div
         className={cn(
-          'md:flex md:flex-row px-[70px] py-4 md:flex-nowrap w-full backdrop-blur-md z-50 fixed hidden justify-between align-middle items-center',
+          'md:flex animate-navbar-slide-down transition border-transparent duration-500 ease-in-out md:flex-row px-[70px] py-4 md:flex-nowrap w-full  z-50 fixed hidden justify-between align-middle items-center',
           {
-            'border-b-slate-200': !topOfPage,
-            'border-b-2': !topOfPage,
+            'border-b': !topOfPage,
+            'border-black/10': !topOfPage,
+            'backdrop-blur-md': !topOfPage,
           },
         )}
       >
-        <Image
-          src="/logos/white-logo.svg"
-          alt="magnet logo"
-          width={70}
-          height={70}
-        />
+        <Link href={'/'}>
+          <Image
+            src="/logos/white-logo.svg"
+            alt="magnet logo"
+            width={40}
+            height={40}
+          />
+        </Link>
         <div className="hidden md:flex flex-row space-x-28 font-lufgaBold">
           {navscreen.map((navscreen) => {
             return (
               <div
                 key={navscreen.name}
-                className="transition ease-in-out duration-300 hover:text-[#5746F4] hover:scale-110 hover:-translate-y-1"
+                className="transition text-black ease-in-out duration-300 hover:text-[#5746F4] hover:scale-110 hover:-translate-y-1"
               >
                 <Link href={navscreen.linkTo}>{navscreen.name}</Link>
               </div>
@@ -59,17 +64,29 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navbar */}
-      <div className="md:hidden ">
+      <div
+        className={cn(
+          'md:hidden z-50 animate-navbar-slide-down transition border-transparent duration-500 ease-in-out fixed p-4 w-full flex justify-between',
+          {
+            'border-b': !topOfPage,
+            'border-black/10': !topOfPage,
+            'backdrop-blur-md': !topOfPage,
+          },
+        )}
+      >
+        <Link href={'/'}>
+          <Image
+            src="/logos/white-logo.svg"
+            alt="magnet logo"
+            width={40}
+            height={40}
+          />
+        </Link>
         <Sheet>
-          <SheetTrigger>
-            <Image
-              src="/logos/white-logo.svg"
-              alt="magnet logo"
-              width={60}
-              height={60}
-            />
+          <SheetTrigger className="">
+            <Menu className="w-8 h-8" />
           </SheetTrigger>
-          <SheetContent side="left" className="w-[250px] bg-[#F6F5FF]">
+          <SheetContent side="right" className="w-[250px] bg-[#F6F5FF]">
             <div className="flex flex-row space-x-2 mb-20">
               <Image
                 src="/logos/black-logo.svg"
