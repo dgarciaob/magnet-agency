@@ -1,10 +1,11 @@
 'use client';
 import { projects } from '@/constants/projects';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React from 'react';
 import { cn } from '@/lib/utils';
 import RouteTitle from './RouteTitle';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import '@/components/css/ProjectSection.css';
 
 const ProjectSection = () => {
   const projectContainerRef = React.useRef<HTMLDivElement>(null);
@@ -61,7 +62,7 @@ const ProjectSection = () => {
       </div>
       <div
         ref={projectContainerRef}
-        className="flex flex-row space-x-8 snap-x snap-mandatory overflow-y-hidden"
+        className="flex flex-row scrollbar-hide space-x-8 snap-x snap-mandatory overflow-y-hidden"
       >
         {projects.map((project) => {
           const textClass = getTextClass(project.alt);
