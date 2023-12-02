@@ -9,8 +9,8 @@ import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import React, { useRef } from 'react';
-import ProyectCarousel from '@/components/ProyectCarousel';
 import '@/components/css/Page.css';
+import ProjectSection from '@/components/ProjectSection';
 
 export default function Home() {
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -65,25 +65,7 @@ export default function Home() {
 
         {/* Proyectos */}
         <div className="mt-[200px] mb-44" id="proyectos">
-          <div className="flex flex-row justify-between items-center align-middle mb-4 mt-24">
-            <RouteTitle
-              title="proyectos"
-              description="ideas convertidas en éxito"
-            />
-            <div className="flex justify-end mt-32">
-              <div className="h-[56px] w-[120px] rounded-full bg-white flex items-center justify-between align-middle px-4">
-                <button className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer">
-                  <ArrowLeft className="cursor-pointer" />
-                </button>
-
-                <button className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer">
-                  <ArrowRight className="cursor-pointer" />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <ProyectCarousel />
+          <ProjectSection />
         </div>
 
         {/* Servicios */}

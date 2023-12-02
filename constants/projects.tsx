@@ -1,4 +1,4 @@
-export const proyects = [
+export const projects = [
   {
     id: 1,
     name: '(magnet)',
