@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import React, { forwardRef } from 'react';
 import { cn } from '@/lib/utils';
+import { motion } from 'framer-motion';
 
 interface ProyectCarouselProps {}
 
@@ -17,6 +18,7 @@ const ProyectCarousel = () => {
     }
     return 'text-black';
   };
+
   return (
     <div className="flex flex-row space-x-8 overflow-x-auto overflow-y-hidden">
       {proyects.map((proyect) => {

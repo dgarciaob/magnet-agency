@@ -10,6 +10,7 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 import React, { useState, useRef } from 'react';
 import ProyectCarousel from '@/components/ProyectCarousel';
+import ServiceCarousel from '@/components/ServiceCarousel';
 
 export default function Home() {
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -104,20 +105,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <ScrollArea>
-            <div className="flex flex-row space-x-8">
-              <div className="w-[420px] h-[585px] rounded-[50px] bg-gradient-to-b from-[#ffb103] to-[#ffcc34] p-2 cursor-pointer">
-                <div className="flex h-full w-full items-center justify-center bg-[#FFD747] back rounded-[43px]"></div>
-              </div>
-              <div className="w-[420px] h-[585px] rounded-[50px] bg-gradient-to-b from-[#ffb103] to-[#ffcc34] p-2 cursor-pointer">
-                <div className="flex h-full w-full items-center justify-center bg-[#FFD747] back rounded-[43px]"></div>
-              </div>
-              <div className="w-[420px] h-[585px] rounded-[50px] bg-gradient-to-b from-[#ffb103] to-[#ffcc34] p-2 cursor-pointer">
-                <div className="flex h-full w-full items-center justify-center bg-[#FFD747] back rounded-[43px]"></div>
-              </div>
-            </div>
-            <ScrollBar orientation="horizontal" />
-          </ScrollArea>
+          <ServiceCarousel />
         </div>
 
         {/* Proceso */}
