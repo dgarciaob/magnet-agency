@@ -33,7 +33,7 @@ const Navbar = () => {
       {/* Desktop Navbar */}
       <div
         className={cn(
-          'md:flex animate-navbar-slide-down transition border-transparent duration-500 ease-in-out md:flex-row px-[70px] py-4 md:flex-nowrap w-full  z-50 fixed hidden justify-between align-middle items-center',
+          'md:flex animate-navbar-slide-down transition border-transparent duration-500 ease-in-out md:flex-row px-[70px] py-4 md:flex-nowrap w-full z-50 fixed hidden justify-between align-middle items-center',
           {
             'border-b': !topOfPage,
             'border-black/10': !topOfPage,

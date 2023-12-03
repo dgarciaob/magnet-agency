@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 
 function Footer() {
   const year = new Date().getFullYear();
@@ -9,7 +10,11 @@ function Footer() {
       <footer className="p-4 sm:p-8">
         <div className="mx-auto max-w-screen-xl">
           <div className="md:flex md:justify-between">
-            <div className="mb-8 md:mb-0">
+            <motion.div
+              className="mb-8 md:mb-0"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.8 }}
+            >
               <Link href="#inicio" className="flex items-center scroll-smooth">
                 <Image
                   src="/logos/white-logo.svg"
@@ -22,7 +27,7 @@ function Footer() {
                   magnet
                 </span>
               </Link>
-            </div>
+            </motion.div>
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 font-sfprorounded">
               <div>
                 <h2 className="mb-6 text-sm font-bold text-[#F6F5FF] uppercase dark:text-white">

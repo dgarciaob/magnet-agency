@@ -6,8 +6,16 @@ import { cn } from '@/lib/utils';
 import RouteTitle from './RouteTitle';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import '@/components/css/ProjectSection.css';
+import {
+  motion,
+  useMotionValue,
+  useSpring,
+  useTransform,
+  useScroll,
+} from 'framer-motion';
 
 const ProjectSection = () => {
+  const ref = React.useRef<HTMLDivElement>(null);
   const projectContainerRef = React.useRef<HTMLDivElement>(null);
   const handleNext = () => {
     if (projectContainerRef.current) {
@@ -35,8 +43,57 @@ const ProjectSection = () => {
     }
     return 'text-black';
   };
+
+  // code for tilt hover effect
+
+  // const x = useMotionValue(0);
+  // const y = useMotionValue(0);
+
+  // const mouseXSpring = useSpring(x);
+  // const mouseYSpring = useSpring(y);
+
+  // const rotateX = useTransform(
+  //   mouseYSpring,
+  //   [-0.5, 0.5],
+  //   ['17.5deg', '-17.5deg'],
+  // );
+  // const rotateY = useTransform(
+  //   mouseXSpring,
+  //   [-0.5, 0.5],
+  //   ['-17.5deg', '17.5deg'],
+  // );
+
+  // const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+  //   const rect = e.currentTarget.getBoundingClientRect();
+
+  //   const width = rect.width;
+  //   const height = rect.height;
+
+  //   const mouseX = e.clientX - rect.left;
+  //   const mouseY = e.clientY - rect.top;
+
+  //   const xPct = mouseX / width - 0.5;
+  //   const yPct = mouseY / height - 0.5;
+
+  //   x.set(xPct);
+  //   y.set(yPct);
+  // };
+
+  // const handleMouseLeave = () => {
+  //   x.set(0);
+  //   y.set(0);
+  // };
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['0 1', '1 1'],
+  });
+
   return (
-    <div>
+    <motion.div
+      ref={ref}
+      style={{ scale: scrollYProgress, opacity: scrollYProgress }}
+    >
       <div className="flex flex-row justify-between items-center align-middle mb-4 mt-24">
         <RouteTitle
           title="proyectos"
@@ -62,13 +119,25 @@ const ProjectSection = () => {
       </div>
       <div
         ref={projectContainerRef}
+        // initial={{ opacity: 0 }}
+        // whileInView={{ opacity: 1 }}
+        // viewport={{ once: true }}
+        // transition={{ duration: 1 }}
         className="flex flex-row scrollbar-hide space-x-8 snap-x snap-mandatory overflow-y-hidden"
       >
         {projects.map((project) => {
           const textClass = getTextClass(project.alt);
+
           return (
             <div
               key={project.id}
+              // onMouseMove={handleMouseMove}
+              // onMouseLeave={handleMouseLeave}
+              // style={{
+              //   rotateY,
+              //   rotateX,
+              //   transformStyle: 'preserve-3d',
+              // }}
               className="snap-start relative rounded-[50px] cursor-pointer"
             >
               <div className="w-[530px] h-[585px]">
@@ -108,7 +177,7 @@ const ProjectSection = () => {
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

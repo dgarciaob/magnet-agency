@@ -1,14 +1,22 @@
 'use client';
 
 import { services } from '@/constants/services';
-import React from 'react';
+import React, { useRef } from 'react';
 import Image from 'next/image';
 import RouteTitle from './RouteTitle';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import '@/components/css/ProjectSection.css';
 import { cn } from '@/lib/utils';
+import {
+  motion,
+  useMotionValue,
+  useSpring,
+  useTransform,
+  useScroll,
+} from 'framer-motion';
 
 const ServiceSection = () => {
+  const ref = React.useRef<HTMLDivElement>(null);
   const serviceContainerRef = React.useRef<HTMLDivElement>(null);
   const handleNext = () => {
     if (serviceContainerRef.current) {
@@ -32,8 +40,16 @@ const ServiceSection = () => {
       return '-mb-10';
     }
   };
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['0 1', '1 1'],
+  });
   return (
-    <div>
+    <motion.div
+      ref={ref}
+      style={{ scale: scrollYProgress, opacity: scrollYProgress }}
+    >
       <div className="flex flex-row justify-between items-center align-middle mb-4 mt-24">
         <RouteTitle
           title="servicios"
@@ -101,7 +117,7 @@ const ServiceSection = () => {
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
