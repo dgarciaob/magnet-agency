@@ -109,7 +109,9 @@ const ServiceSection = () => {
                     </p>
                   </div>
                   <div className="mt-3">
-                    <h2 className="font-sfprorounded">{service.description}</h2>
+                    <h2 className="text-base font-sfprorounded">
+                      {service.description}
+                    </h2>
                   </div>
                 </div>
               </div>

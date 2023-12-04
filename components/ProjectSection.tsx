@@ -149,9 +149,9 @@ const ProjectSection = () => {
                 />
               </div>
 
-              <div className="absolute bottom-0 w-full h-1/3 backdrop-blur-md rounded-b-[50px] flex items-center justify-center">
-                <div className="p-10 space-y-2">
-                  <div className="flex flex-row space-x-5 items-center">
+              <div className="absolute bottom-0 w-full h-[190px] backdrop-blur-md rounded-b-[50px] flex items-center justify-center">
+                <div className="px-10 py-5 space-y-2">
+                  <div className="flex flex-row space-x-5 items-center mb-5">
                     <Image
                       src={project.logoImg}
                       alt="Logo de Marca"
@@ -168,7 +168,7 @@ const ProjectSection = () => {
                     </h2>
                   </div>
 
-                  <p className={cn('text-md font-sfprorounded', textClass)}>
+                  <p className={cn('text-base font-sfprorounded', textClass)}>
                     {project.descripcion}
                   </p>
                 </div>
