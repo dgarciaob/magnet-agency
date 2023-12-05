@@ -12,6 +12,7 @@ import React from 'react';
 import ServiceSection from '@/components/ServiceSection';
 import '@/components/css/Page.css';
 import ProjectSection from '@/components/ProjectSection';
+import AboutUsSection from '@/components/AboutUsSection';
 
 export default function Home() {
   return (
@@ -24,8 +25,8 @@ export default function Home() {
           {/* Logo, Hero & CTA */}
           <div className="animate-hero-slide-up order-last">
             {/* TODO: Agregar animación al logo pequeño con Framer Motion */}
-            <h1 className="font-lufgaBold sm:text-6xl text-5xl mb-16 sm:text-left text-center">
-              el partner digital <br />
+            <h1 className="font-lufgaBold sm:text-7xl text-5xl mb-16 sm:text-left text-center">
+              El partner digital <br />
               de tu siguiente <br />
               gran idea
             </h1>
@@ -33,18 +34,18 @@ export default function Home() {
               <Link href="#contacto" scroll className=" scroll-smooth">
                 <Button
                   variant="default"
-                  className="font-lufgaMedium h-[72px] md:w-[200px] w-full text-2xl"
+                  className="font-sfprorounded h-[64px] md:w-[200px] w-full text-xl"
                 >
-                  agendar cita
+                  Agendar cita
                 </Button>
               </Link>
 
               <Link href="#proyectos" className="scroll-smooth">
                 <Button
                   variant="secondary"
-                  className="font-lufgaMedium h-[72px] md:w-[200px] w-full text-2xl "
+                  className="font-sfprorounded h-[64px] md:w-[200px] w-full text-xl "
                 >
-                  descubre <ArrowDown className="ml-3" />
+                  Descubre <ArrowDown className="ml-3" />
                 </Button>
               </Link>
             </div>
@@ -76,8 +77,8 @@ export default function Home() {
         <div className="mt-[200px] mb-44">
           <div className="flex flex-row justify-between items-center align-middle mb-4 mt-24">
             <RouteTitle
-              title="proceso"
-              description="nuestra aproximación al double diamond"
+              title="Proceso"
+              description="Cómo resolvemos tu problema"
             />
             <div className="flex justify-end mt-32">
               <div className="h-[56px] w-[120px] rounded-full bg-white flex items-center justify-between align-middle px-4">
@@ -91,20 +92,11 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <ScrollArea>
-            <div className="flex flex-row space-x-8">
-              <div className="w-[420px] h-[585px] rounded-[50px] bg-gradient-to-b from-[#ffb103] to-[#ffcc34] p-2 cursor-pointer">
-                <div className="flex h-full w-full items-center justify-center bg-[#FFD747] back rounded-[43px]"></div>
-              </div>
-              <div className="w-[420px] h-[585px] rounded-[50px] bg-gradient-to-b from-[#ffb103] to-[#ffcc34] p-2 cursor-pointer">
-                <div className="flex h-full w-full items-center justify-center bg-[#FFD747] back rounded-[43px]"></div>
-              </div>
-              <div className="w-[420px] h-[585px] rounded-[50px] bg-gradient-to-b from-[#ffb103] to-[#ffcc34] p-2 cursor-pointer">
-                <div className="flex h-full w-full items-center justify-center bg-[#FFD747] back rounded-[43px]"></div>
-              </div>
-            </div>
-            <ScrollBar orientation="horizontal" />
-          </ScrollArea>
+        </div>
+
+        {/* Nosotros */}
+        <div className="mt-[200px] mb-44" id="nosotros">
+          <AboutUsSection />
         </div>
 
         <Footer />

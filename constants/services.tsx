@@ -19,20 +19,11 @@ export const services = [
   },
   {
     id: 3,
-    name: 'subscription',
-    bgImg: '/images/4xcardwww.png',
+    name: 'suscripción',
+    bgImg: '/images/4xcardsub.png',
     alt: "Subscription's Background",
-    cost: '$2999',
+    cost: '$4999/mes',
     description:
-      'Contrata nuestros servicios acorde con tu necesidad continua de diseño y desarrollo. Una suscripción ilimitada.',
-  },
-  {
-    id: 4,
-    name: 'contacto',
-    bgImg: '/images/4xcardwww.png',
-    alt: "Contact's Background",
-    cost: '',
-    description:
-      '¿No encuentras lo que buscas? ¿Tienes un proyecto específico en mente? Conctáctanos para colaborar.',
+      'Contrata nuestros servicios acorde con tu necesidad continua de diseño. Una suscripción ilimitada.',
   },
 ];

@@ -7,6 +7,15 @@ export const projects = [
     logoImg: '/logos/logomagnet.png',
     descripcion:
       'Un nuevo comienzo. Acompáñanos a ser líderes globales en transformación de emprendedores. Conoce más sobre magnet y su universo creativo aquí.',
+    descripcionModal:
+      'Nuestra agencia de diseño y desarrollo. El mejor ejemplo de nuestro estándar de trabajo y de la calidad que obtendrás. Diseño y Desarrollo completo de marca.',
+    serviceType: 'Brand - Webdev',
+    linkToWeb: '/',
+    modalImgOne: '/images/magnet1.png',
+    modalImgTwo: '/images/magnetBg.png',
+    modalImgThree: '/images/magnet3.png',
+    modalImgFour: '/logos/white-logo.svg',
+    modalImgFive: '/images/magnet5.png',
   },
   {
     id: 2,
@@ -16,6 +25,15 @@ export const projects = [
     logoImg: '/logos/logospaw.png',
     descripcion:
       'Somos una cápsula de emociones, una vanguardia creativa que encuentra sus raíces en tiempos más simples. Descubre el mensaje de SPAW aquí.',
+    descripcionModal:
+      'SPAW is a brand that encompasses several fields, hence the need to have an everchanging but recognizable logo. A brand that thrives on the reminiscence of simpler times.',
+    serviceType: 'Brand',
+    linkToWeb: 'https://www.google.com/',
+    modalImgOne: '/images/spaw1.png',
+    modalImgTwo: '/images/spaw2.png',
+    modalImgThree: '/images/spaw3.png',
+    modalImgFour: '/images/spaw4.png',
+    modalImgFive: '/images/spaw5.png',
   },
   {
     id: 3,
@@ -25,6 +43,15 @@ export const projects = [
     logoImg: '/logos/logokuk.png',
     descripcion:
       'La diversión de ver las coloridas fotos del recetario de mamá son traídas a la era digital con Kuk. Tu nuevo compañero de cocina a un tap de distancia.',
+    descripcionModal:
+      'Kuk, app para principiantes en la cocina casera. Proporciona un diario personalizable de comidas para manejar tiempo y dinero.',
+    serviceType: 'UX/UI',
+    linkToWeb: 'https://www.zerendor.com/',
+    modalImgOne: '/images/kuk1.png',
+    modalImgTwo: '/images/kuk2.png',
+    modalImgThree: '/images/kuk3.png',
+    modalImgFour: '/images/kuk4.png',
+    modalImgFive: '/images/kuk5.png',
   },
   {
     id: 4,
@@ -34,6 +61,15 @@ export const projects = [
     logoImg: '/logos/logozere.png',
     descripcion:
       'El diseño es la solución. zerendor.com. La pasión es la clave. zerendor.com. La disciplina es el éxito. zerendor.com',
+    descripcionModal:
+      'El diseño es la solución. zerendor.com. La pasión es la clave. zerendor.com. La disciplina es el éxito. zerendor.com. Webdev for zerendor.com.',
+    serviceType: 'Webdev',
+    linkToWeb: 'https://www.zerendor.com/',
+    modalImgOne: '/images/zere1.png',
+    modalImgTwo: '/images/zere2.png',
+    modalImgThree: '/images/zere3.png',
+    modalImgFour: '/images/zere4.png',
+    modalImgFive: '/images/zere5.png',
   },
   {
     id: 5,
@@ -43,6 +79,15 @@ export const projects = [
     logoImg: '/logos/logogiko.png',
     descripcion:
       'Los artesanos apasionados de los periféricos llegan a tu escritorio a cumplir con la vision de tu espacio ideal. Apunta al placer de escribir con giko.',
+    descripcionModal:
+      'Completo diseño de marca para Giko [+]. Desarrollo de identidad y posicionamiento de marca dentro del rubro de teclados mecánicos.',
+    serviceType: 'Brand',
+    linkToWeb: 'https://www.zerendor.com/',
+    modalImgOne: '/images/giko1.png',
+    modalImgTwo: '/images/giko2.png',
+    modalImgThree: '/images/giko3.png',
+    modalImgFour: '/images/giko4.png',
+    modalImgFive: '/images/giko5.png',
   },
   {
     id: 6,
@@ -52,5 +97,14 @@ export const projects = [
     logoImg: '/logos/logoacepadel.png',
     descripcion:
       'Fomentando la práctica del deporte a través de una SaaS. Maneja tus canchas, a tu medida y únete al juego hoy mismo. Gestiona tu negocio con Ace, aquí.',
+    descripcionModal:
+      'UX/UI y desarrollo SaaS para plataforma de gestión de canchas de pádel. Diseño de interfaz y experiencia de usuario & Desarrollo Software as a Service.',
+    serviceType: 'Webdev',
+    linkToWeb: 'https://www.zerendor.com/',
+    modalImgOne: '',
+    modalImgTwo: '',
+    modalImgThree: '',
+    modalImgFour: '',
+    modalImgFive: '',
   },
 ];

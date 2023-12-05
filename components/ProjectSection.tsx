@@ -1,11 +1,12 @@
 'use client';
 import { projects } from '@/constants/projects';
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
 import RouteTitle from './RouteTitle';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import '@/components/css/ProjectSection.css';
+import Modal from './Modal';
 import {
   motion,
   useMotionValue,
@@ -42,6 +43,18 @@ const ProjectSection = () => {
       return 'text-white';
     }
     return 'text-black';
+  };
+
+  const [selectedId, setSelectedId] = useState<number | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleProjectClick = (id: number) => {
+    setSelectedId(id);
+    setIsModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
   };
 
   // code for tilt hover effect
@@ -96,8 +109,8 @@ const ProjectSection = () => {
     >
       <div className="flex flex-row justify-between items-center align-middle mb-4 mt-24">
         <RouteTitle
-          title="proyectos"
-          description="ideas convertidas en éxito"
+          title="Proyectos"
+          description="Ideas convertidas en éxito"
         />
         <div className="flex justify-end mt-32">
           <div className="h-[56px] w-[120px] rounded-full bg-white flex items-center justify-between align-middle px-4">
@@ -117,66 +130,74 @@ const ProjectSection = () => {
           </div>
         </div>
       </div>
-      <div
-        ref={projectContainerRef}
-        // initial={{ opacity: 0 }}
-        // whileInView={{ opacity: 1 }}
-        // viewport={{ once: true }}
-        // transition={{ duration: 1 }}
-        className="flex flex-row scrollbar-hide space-x-8 snap-x snap-mandatory overflow-y-hidden"
-      >
-        {projects.map((project) => {
-          const textClass = getTextClass(project.alt);
+      <div>
+        <div
+          ref={projectContainerRef}
+          // initial={{ opacity: 0 }}
+          // whileInView={{ opacity: 1 }}
+          // viewport={{ once: true }}
+          // transition={{ duration: 1 }}
+          className="flex flex-row scrollbar-hide space-x-8 snap-x snap-mandatory overflow-y-hidden"
+        >
+          {projects.map((project) => {
+            const textClass = getTextClass(project.alt);
 
-          return (
-            <div
-              key={project.id}
-              // onMouseMove={handleMouseMove}
-              // onMouseLeave={handleMouseLeave}
-              // style={{
-              //   rotateY,
-              //   rotateX,
-              //   transformStyle: 'preserve-3d',
-              // }}
-              className="snap-start relative rounded-[50px] cursor-pointer"
-            >
-              <div className="w-[530px] h-[585px]">
-                <Image
-                  src={project.bgImg}
-                  alt={project.alt}
-                  fill
-                  className="rounded-[50px] object-cover"
-                />
-              </div>
+            return (
+              <div
+                key={project.id}
+                // onMouseMove={handleMouseMove}
+                // onMouseLeave={handleMouseLeave}
+                // style={{
+                //   rotateY,
+                //   rotateX,
+                //   transformStyle: 'preserve-3d',
+                // }}
+                className="snap-start relative rounded-[50px] cursor-pointer"
+                onClick={() => handleProjectClick(project.id)}
+              >
+                <div className="w-[530px] h-[585px]">
+                  <Image
+                    src={project.bgImg}
+                    alt={project.alt}
+                    fill
+                    className="rounded-[50px] object-cover"
+                  />
+                </div>
 
-              <div className="absolute bottom-0 w-full h-[190px] backdrop-blur-md rounded-b-[50px] flex items-center justify-center">
-                <div className="px-10 py-5 space-y-2">
-                  <div className="flex flex-row space-x-5 items-center mb-5">
-                    <Image
-                      src={project.logoImg}
-                      alt="Logo de Marca"
-                      width={50}
-                      height={50}
-                    />
-                    <h2
-                      className={cn(
-                        'text-xl font-lufgaBold font-bold',
-                        textClass,
-                      )}
-                    >
-                      {project.name}
-                    </h2>
+                <div className="absolute bottom-0 w-full h-[210px] backdrop-blur-md rounded-b-[50px] flex items-center justify-center">
+                  <div className="px-10 pt-5 pb-10 space-y-2">
+                    <div className="flex flex-row space-x-5 items-center mb-5">
+                      <Image
+                        src={project.logoImg}
+                        alt="Logo de Marca"
+                        width={50}
+                        height={50}
+                      />
+                      <h2
+                        className={cn(
+                          'text-xl font-lufgaBold font-bold',
+                          textClass,
+                        )}
+                      >
+                        {project.name}
+                      </h2>
+                    </div>
+
+                    <p className={cn('text-base font-sfprorounded', textClass)}>
+                      {project.descripcion}
+                    </p>
                   </div>
-
-                  <p className={cn('text-base font-sfprorounded', textClass)}>
-                    {project.descripcion}
-                  </p>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
+      {isModalOpen && (
+        <div>
+          <Modal id={selectedId} onClose={handleModalClose} />
+        </div>
+      )}
     </motion.div>
   );
 };

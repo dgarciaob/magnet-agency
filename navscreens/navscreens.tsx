@@ -1,18 +1,18 @@
 export const navscreen = [
   {
-    name: "portafolio",
-    linkTo: "/portafolio",
+    name: 'Portafolio',
+    linkTo: '/portafolio',
   },
   {
-    name: "servicios",
-    linkTo: "/servicios",
+    name: 'Servicios',
+    linkTo: '/servicios',
   },
   {
-    name: "nosotros",
-    linkTo: "/nosotros",
+    name: 'Nosotros',
+    linkTo: '/nosotros',
   },
   {
-    name: "contacto",
-    linkTo: "/contacto",
+    name: 'Contacto',
+    linkTo: '/contacto',
   },
 ];
