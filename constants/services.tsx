@@ -19,6 +19,15 @@ export const services = [
   },
   {
     id: 3,
+    name: 'appdev',
+    bgImg: '/images/4xcardwww.png',
+    alt: "App Dev's Background",
+    cost: '$1999',
+    description:
+      'Digitaliza tu experiencia con una app que te permita llegar a más clientes y escalar tu negocio.',
+  },
+  {
+    id: 4,
     name: 'suscripción',
     bgImg: '/images/4xcardsub.png',
     alt: "Subscription's Background",
