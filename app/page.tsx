@@ -5,7 +5,6 @@ import { Button } from '@/components/ui/button';
 import { ArrowDown, ArrowLeft, ArrowRight } from 'lucide-react';
 import RouteTitle from '@/components/RouteTitle';
 import { motion } from 'framer-motion';
-import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import React from 'react';
@@ -13,6 +12,8 @@ import ServiceSection from '@/components/ServiceSection';
 import '@/components/css/Page.css';
 import ProjectSection from '@/components/ProjectSection';
 import AboutUsSection from '@/components/AboutUsSection';
+import ContactFormSection from '@/components/ContactFormSection';
+import PartnersSection from '@/components/PartnersSection';
 
 export default function Home() {
   return (
@@ -63,8 +64,12 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="mt-32">
+          <PartnersSection />
+        </div>
+
         {/* Proyectos */}
-        <div className="mt-[200px] mb-44" id="proyectos">
+        <div className="mt-[180px] mb-44" id="proyectos">
           <ProjectSection />
         </div>
 
@@ -97,6 +102,10 @@ export default function Home() {
         {/* Nosotros */}
         <div className="mt-[200px] mb-44" id="nosotros">
           <AboutUsSection />
+        </div>
+
+        <div className="mt-[200px] mb-44" id="contacto">
+          <ContactFormSection />
         </div>
 
         <Footer />

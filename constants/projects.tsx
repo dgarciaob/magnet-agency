@@ -28,7 +28,7 @@ export const projects = [
     descripcionModal:
       'SPAW is a brand that encompasses several fields, hence the need to have an everchanging but recognizable logo. A brand that thrives on the reminiscence of simpler times.',
     serviceType: 'Brand',
-    linkToWeb: 'https://www.google.com/',
+    linkToWeb: 'https://www.behance.net/gallery/180826501/Brands-x-SPAW',
     modalImgOne: '/images/spaw1.png',
     modalImgTwo: '/images/spaw2.png',
     modalImgThree: '/images/spaw3.png',
@@ -46,7 +46,7 @@ export const projects = [
     descripcionModal:
       'Kuk, app para principiantes en la cocina casera. Proporciona un diario personalizable de comidas para manejar tiempo y dinero.',
     serviceType: 'UX/UI',
-    linkToWeb: 'https://www.zerendor.com/',
+    linkToWeb: 'https://www.behance.net/gallery/164030461/Kuk-a-cooking-app',
     modalImgOne: '/images/kuk1.png',
     modalImgTwo: '/images/kuk2.png',
     modalImgThree: '/images/kuk3.png',

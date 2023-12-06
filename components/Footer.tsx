@@ -73,7 +73,7 @@ function Footer() {
                   Contacto
                 </h2>
                 <ul className="text-[#F6F5FF]/80 dark:text-gray-400">
-                  <li className="mb-4" id="contacto">
+                  <li className="mb-4">
                     <Link
                       href={`https://wa.me/51999936189?text=${encodeURIComponent(
                         'Hola!, vengo de magnetperu.com y quisiera más información sobre .',
