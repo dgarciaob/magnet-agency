@@ -110,7 +110,7 @@ const ProjectSection = () => {
       <div className="flex flex-row justify-between items-center align-middle mb-4 mt-24">
         <RouteTitle
           title="Proyectos"
-          description="Ideas convertidas en éxito"
+          description="Nuestras más recientes historias"
         />
         <div className="flex justify-end mt-32">
           <div className="h-[56px] w-[120px] rounded-full bg-white flex items-center justify-between align-middle px-4">
@@ -130,6 +130,7 @@ const ProjectSection = () => {
           </div>
         </div>
       </div>
+
       <div>
         <div
           ref={projectContainerRef}

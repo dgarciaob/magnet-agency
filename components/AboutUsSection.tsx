@@ -21,7 +21,10 @@ const AboutUsSection = () => {
       style={{ scale: scrollYProgress, opacity: scrollYProgress }}
     >
       <div className="flex flex-row justify-between items-center align-middle mb-4 mt-24">
-        <RouteTitle title="Nosotros" description="La magia detrás de magnet" />
+        <RouteTitle
+          title="Equipo"
+          description="Las personas que forman magnet"
+        />
       </div>
     </motion.div>
   );
