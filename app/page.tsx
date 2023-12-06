@@ -14,6 +14,7 @@ import ProjectSection from '@/components/ProjectSection';
 import AboutUsSection from '@/components/AboutUsSection';
 import ContactFormSection from '@/components/ContactFormSection';
 import PartnersSection from '@/components/PartnersSection';
+import SocialProofSection from '@/components/SocialProofSection';
 
 export default function Home() {
   return (
@@ -64,17 +65,21 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-32">
+        <div className="mt-40">
           <PartnersSection />
         </div>
 
         {/* Proyectos */}
-        <div className="mt-[180px] mb-44" id="proyectos">
+        <div className="mt-[100px] mb-44" id="proyectos">
           <ProjectSection />
         </div>
 
+        <div className="mt-40">
+          <SocialProofSection />
+        </div>
+
         {/* Servicios */}
-        <div className="mt-[200px] mb-44" id="servicios">
+        <div className="mt-[90px] mb-44" id="servicios">
           <ServiceSection />
         </div>
 
