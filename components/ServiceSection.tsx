@@ -88,8 +88,9 @@ const ServiceSection = () => {
                 <Image
                   src={service.bgImg}
                   alt={service.alt}
-                  fill
-                  className="rounded-[25px] object-cover"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-[25px]"
                 />
               </div>
 

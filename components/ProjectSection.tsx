@@ -160,8 +160,9 @@ const ProjectSection = () => {
                   <Image
                     src={project.bgImg}
                     alt={project.alt}
-                    fill
-                    className="rounded-[50px] object-cover"
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-[50px]"
                   />
                 </div>
 

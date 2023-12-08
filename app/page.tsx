@@ -19,14 +19,13 @@ import SocialProofSection from '@/components/SocialProofSection';
 export default function Home() {
   return (
     <>
-      <MaxWidthWrapper>
+      <div>
         <div
-          className=" md:grid md:grid-cols-2 flex flex-col items-center md:pt-36 pt-20 md:h-screen w-full"
+          className="md:grid md:grid-cols-2 flex flex-col items-center md:pt-36 pt-20 md:h-screen w-full mx-auto max-w-screen-2xl px-4 lg:px-[70px]"
           id="inicio"
         >
           {/* Logo, Hero & CTA */}
           <div className="animate-hero-slide-up order-last">
-            {/* TODO: Agregar animación al logo pequeño con Framer Motion */}
             <h1 className="font-lufgaBold sm:text-7xl text-5xl mb-16 sm:text-left text-center">
               El partner digital <br />
               de tu siguiente <br />
@@ -65,26 +64,32 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-40">
+        <div className="mt-40 mx-auto w-full max-w-screen-2xl px-4 lg:px-[70px]">
           <PartnersSection />
         </div>
 
         {/* Proyectos */}
-        <div className="mt-[100px] mb-44" id="proyectos">
+        <div
+          className="mt-[100px] mb-44 mx-auto w-full max-w-screen-2xl px-4 lg:px-[70px]"
+          id="proyectos"
+        >
           <ProjectSection />
         </div>
 
-        <div className="mt-40">
+        <div className="mt-40 mx-auto w-full max-w-screen-2xl px-4 lg:px-[70px]">
           <SocialProofSection />
         </div>
 
         {/* Servicios */}
-        <div className="mt-[90px] mb-44" id="servicios">
+        <div
+          className="mt-[90px] mb-44 mx-auto w-full max-w-screen-2xl px-4 lg:px-[70px]"
+          id="servicios"
+        >
           <ServiceSection />
         </div>
 
         {/* Proceso */}
-        <div className="mt-[200px] mb-44">
+        <div className="mt-[200px] mb-44 mx-auto w-full max-w-screen-2xl px-4 lg:px-[70px]">
           <div className="flex flex-row justify-between items-center align-middle mb-4 mt-24">
             <RouteTitle
               title="Proceso"
@@ -105,16 +110,22 @@ export default function Home() {
         </div>
 
         {/* Nosotros */}
-        <div className="mt-[200px] mb-44" id="nosotros">
+        <div
+          className="mt-[200px] mb-44 mx-auto w-full max-w-screen-2xl"
+          id="nosotros"
+        >
           <AboutUsSection />
         </div>
 
-        <div className="mt-[200px] mb-44" id="contacto">
+        <div
+          className="mt-[200px] mb-44 mx-auto w-full max-w-screen-2xl px-4 lg:px-[70px]"
+          id="contacto"
+        >
           <ContactFormSection />
         </div>
 
         <Footer />
-      </MaxWidthWrapper>
+      </div>
     </>
   );
 }

@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import {
   motion,
@@ -26,7 +27,7 @@ const fadeInAnimationVariant = {
 const SocialProofSection = () => {
   return (
     <div className="flex flex-col">
-      <div className="mb-10">
+      <div className="mb-16">
         <h2 className="font-lufgaBold lg:text-4xl text-center text-[#5746F4]">
           Confiaron en nosotros
         </h2>
