@@ -42,22 +42,27 @@ html {
 }
 
 @font-face {
-  font-family: 'SF Pro Rounded';
+  font-family: 'SF Pro';
+  src: local('SF Pro Regular'), local('SFPro-Regular');
+  font-weight: normal;
   font-style: normal;
-  font-weight: 400;
-  src: local('SF Pro Rounded'), local('SFProRounded-Regular');
 }
 
-.font-sfprorounded {
-  font-family:
-    'SF Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif;
+.font-sfpro {
+  font-family: 'SF Pro', sans-serif;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro';
+  src: local('SF Pro Bold'), local('SFPro-Bold');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.font-sfprobold {
+  font-family: 'SF Pro', sans-serif;
+  font-weight: bold;
 }
 
 .scrollbar-hide::-webkit-scrollbar {

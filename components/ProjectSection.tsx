@@ -116,14 +116,14 @@ const ProjectSection = () => {
           <div className="h-[56px] w-[120px] rounded-full bg-white flex items-center justify-between align-middle px-4">
             <button
               onClick={handlePrev}
-              className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer"
+              className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/70 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer"
             >
               <ArrowLeft className="cursor-pointer" />
             </button>
 
             <button
               onClick={handleNext}
-              className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer"
+              className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/70 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer"
             >
               <ArrowRight className="cursor-pointer" />
             </button>
@@ -160,9 +160,8 @@ const ProjectSection = () => {
                   <Image
                     src={project.bgImg}
                     alt={project.alt}
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-[50px]"
+                    fill
+                    className="rounded-[50px] object-cover"
                   />
                 </div>
 
@@ -185,7 +184,7 @@ const ProjectSection = () => {
                       </h2>
                     </div>
 
-                    <p className={cn('text-base font-sfprorounded', textClass)}>
+                    <p className={cn('text-base font-sfpro', textClass)}>
                       {project.descripcion}
                     </p>
                   </div>

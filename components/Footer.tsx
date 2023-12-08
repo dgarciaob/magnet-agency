@@ -28,9 +28,9 @@ function Footer() {
                 </span>
               </Link>
             </motion.div>
-            <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 font-sfprorounded">
+            <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 font-sfpro">
               <div>
-                <h2 className="mb-6 text-sm font-bold text-[#F6F5FF] uppercase dark:text-white">
+                <h2 className="mb-6 text-sm font-sfprobold text-[#F6F5FF] uppercase dark:text-white">
                   Nosotros
                 </h2>
                 <ul className="text-[#F6F5FF]/80 dark:text-gray-400">
@@ -52,7 +52,7 @@ function Footer() {
                 </ul>
               </div>
               <div>
-                <h2 className="mb-6 text-sm font-bold text-[#F6F5FF] uppercase dark:text-white">
+                <h2 className="mb-6 text-sm font-sfprobold text-[#F6F5FF] uppercase dark:text-white">
                   Servicios
                 </h2>
                 <ul className="text-[#F6F5FF]/80 dark:text-gray-400">
@@ -69,7 +69,7 @@ function Footer() {
                 </ul>
               </div>
               <div>
-                <h2 className="mb-6 text-sm font-semibold text-[#F6F5FF] uppercase">
+                <h2 className="mb-6 text-sm font-sfprobold text-[#F6F5FF] uppercase">
                   Contacto
                 </h2>
                 <ul className="text-[#F6F5FF]/80 dark:text-gray-400">

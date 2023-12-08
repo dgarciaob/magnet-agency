@@ -10,7 +10,7 @@ import {
   useScroll,
 } from 'framer-motion';
 
-const AboutUsSection = (name: string) => {
+const AboutUsSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
   const [currentFounder, setCurrentFounder] = useState('');
@@ -44,15 +44,15 @@ const AboutUsSection = (name: string) => {
         <Image
           src="/images/BG4X.png"
           alt="Background Magnet"
-          layout="fill"
-          objectFit="cover"
+          fill
+          className="object-cover"
         />
         <div className="relative h-[30%] w-[30%]">
           <Image
             src="/images/magnetTeamLogo.png"
             alt="Magnet Team Logo"
-            layout="fill"
-            objectFit="contain"
+            fill
+            className="object-contain"
           />
         </div>
         <div
@@ -63,8 +63,8 @@ const AboutUsSection = (name: string) => {
           <Image
             src="/images/diego.png"
             alt="Diego Garcia"
-            layout="fill"
-            objectFit="contain"
+            fill
+            className="object-contain"
           />
         </div>
         <div
@@ -75,8 +75,8 @@ const AboutUsSection = (name: string) => {
           <Image
             src="/images/bj.png"
             alt="Bruno Jacobs"
-            layout="fill"
-            objectFit="contain"
+            fill
+            className="object-contain"
           />
         </div>
         <div
@@ -87,8 +87,8 @@ const AboutUsSection = (name: string) => {
           <Image
             src="/images/zere.png"
             alt="Bruno Gardini"
-            layout="fill"
-            objectFit="contain"
+            fill
+            className="object-contain"
           />
         </div>
         <div
@@ -99,8 +99,8 @@ const AboutUsSection = (name: string) => {
           <Image
             src="/images/zumi.png"
             alt="Guille Zumarán"
-            layout="fill"
-            objectFit="contain"
+            fill
+            className="object-contain"
           />
         </div>
         {isHovered && (
@@ -121,9 +121,8 @@ const AboutUsSection = (name: string) => {
                 <Image
                   src={founder.image}
                   alt={founder.alt}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-[25px]"
+                  fill
+                  className="rounded-[25px] object-cover"
                 />
               </div>
               <div className="absolute bottom-0 w-full h-1/3 backdrop-blur-md rounded-b-[25px] flex items-center justify-center">

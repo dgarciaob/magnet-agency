@@ -32,10 +32,10 @@ export default function Home() {
               gran idea
             </h1>
             <div className="md:space-x-5 space-y-5 flex flex-col md:block sm:px-0 px-8">
-              <Link href="#contacto" scroll className=" scroll-smooth">
+              <Link href="#contacto" scroll className="scroll-smooth">
                 <Button
                   variant="default"
-                  className="font-sfprorounded h-[64px] md:w-[200px] w-full text-xl"
+                  className="font-sfpro h-[56px] md:w-[200px] w-full text-xl"
                 >
                   Agendar cita
                 </Button>
@@ -44,7 +44,7 @@ export default function Home() {
               <Link href="#proyectos" className="scroll-smooth">
                 <Button
                   variant="secondary"
-                  className="font-sfprorounded h-[64px] md:w-[200px] w-full text-xl "
+                  className="font-sfpro h-[56px] md:w-[200px] w-full text-xl "
                 >
                   Descubre <ArrowDown className="ml-3" />
                 </Button>
@@ -57,7 +57,7 @@ export default function Home() {
               className="4xl:w-[1800px] 3xl:w-[1600px] 2xl:w-[1400px] xl:w-[1200px] lg:w-[900px] md:w-[800px] w-[600px]"
               drag
               dragSnapToOrigin
-              dragElastic={0.4}
+              dragElastic={0.5}
               dragConstraints={{ right: 0, left: 0, top: 0, bottom: 0 }}
               src="/images/MagnetHero.png"
             />
@@ -97,11 +97,11 @@ export default function Home() {
             />
             <div className="flex justify-end mt-32">
               <div className="h-[56px] w-[120px] rounded-full bg-white flex items-center justify-between align-middle px-4">
-                <button className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer">
+                <button className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/70 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer">
                   <ArrowLeft className="cursor-pointer" />
                 </button>
 
-                <button className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer">
+                <button className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/70 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer">
                   <ArrowRight className="cursor-pointer" />
                 </button>
               </div>

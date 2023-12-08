@@ -49,7 +49,7 @@ const Navbar = () => {
             height={40}
           />
         </Link>
-        <div className="hidden md:flex flex-row space-x-28 font-lufgaBold">
+        <div className="hidden md:flex flex-row space-x-28 font-sfprobold">
           {navscreen.map((navscreen) => {
             return (
               <div

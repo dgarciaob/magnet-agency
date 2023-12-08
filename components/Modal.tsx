@@ -58,9 +58,8 @@ const Modal = ({ id, onClose }: ModalProps) => {
                 <Image
                   src={project?.modalImgOne || '/'}
                   alt={project?.alt || 'Imagen del Proyecto'}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-xl"
+                  fill
+                  className="rounded-xl object-cover"
                 />
               </div>
             </div>
@@ -69,9 +68,8 @@ const Modal = ({ id, onClose }: ModalProps) => {
               <Image
                 src={project?.modalImgTwo || '/'}
                 alt={project?.alt || 'Imagen del Proyecto'}
-                layout="fill"
-                objectFit="cover"
-                className="rounded-xl"
+                fill
+                className="rounded-xl object-cover"
               />
             </div>
 
@@ -81,18 +79,16 @@ const Modal = ({ id, onClose }: ModalProps) => {
                   <Image
                     src={project?.modalImgThree || '/'}
                     alt={project?.alt || 'Imagen del Proyecto'}
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-xl"
+                    fill
+                    className="rounded-xl object-cover"
                   />
                 </div>
                 <div className="w-1/2 relative rounded-xl">
                   <Image
                     src={project?.modalImgFour || '/'}
                     alt={project?.alt || 'Imagen del Proyecto'}
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-xl"
+                    fill
+                    className="rounded-xl object-cover"
                   />
                 </div>
               </div>
@@ -101,9 +97,8 @@ const Modal = ({ id, onClose }: ModalProps) => {
                 <Image
                   src={project?.modalImgFive || '/'}
                   alt={project?.alt || 'Imagen del Proyecto'}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-xl"
+                  fill
+                  className="rounded-xl object-cover"
                 />
               </div>
 

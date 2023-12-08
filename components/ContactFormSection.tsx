@@ -62,7 +62,7 @@ const ContactFormSection = () => {
     >
       <div className="p-8 rounded-xl bg-[#1F1F1F] w-full h-full flex flex-row justify-between">
         <div className="bg-gradient-to-b from-[#FFFFFF] to-[#F7FFFA] rounded-lg w-1/3 p-8 shadow-lg">
-          <h2 className="text-4xl font-lufgaBold font-bold text-[#1F1F1F]">
+          <h2 className="text-4xl font-sfprobold font-bold text-[#1F1F1F]">
             ¿Alguna consulta? <br />
             Ayudamos a cumplir tu{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7346F4] to-[#4603FF]">
@@ -74,11 +74,11 @@ const ContactFormSection = () => {
               />
             </span>
           </h2>
-          <p className="text-xl font-sfprorounded text-slate-500 mt-4">
+          <p className="text-xl font-sfpro text-slate-500 mt-4">
             ¡Déjanos un mensaje!
           </p>
         </div>
-        <div className="w-2/3 flex justify-center items-center font-sfprorounded">
+        <div className="w-2/3 flex justify-center items-center font-sfpro">
           <div className="max-w-lg w-full">
             <Form {...form}>
               <form
@@ -155,7 +155,7 @@ const ContactFormSection = () => {
                     );
                   }}
                 />
-                <Button type="submit" className="rounded-md w-full">
+                <Button type="submit" className="rounded-md w-full font-sfpro">
                   Enviar
                 </Button>
               </form>

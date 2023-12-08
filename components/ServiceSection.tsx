@@ -59,14 +59,14 @@ const ServiceSection = () => {
           <div className="h-[56px] w-[120px] rounded-full bg-white flex items-center justify-between align-middle px-4">
             <button
               onClick={handlePrev}
-              className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer"
+              className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/70 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer"
             >
               <ArrowLeft className="cursor-pointer" />
             </button>
 
             <button
               onClick={handleNext}
-              className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/80 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer"
+              className="rounded-full bg-[#5746F4]/20 hover:bg-[#5746f4]/70 transition duration-300 h-9 w-9 flex items-center justify-center cursor-pointer"
             >
               <ArrowRight className="cursor-pointer" />
             </button>
@@ -88,9 +88,8 @@ const ServiceSection = () => {
                 <Image
                   src={service.bgImg}
                   alt={service.alt}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-[25px]"
+                  fill
+                  className="rounded-[25px] object-cover"
                 />
               </div>
 
@@ -102,7 +101,7 @@ const ServiceSection = () => {
                     </h2>
                   </div>
                   <div>
-                    <p className="font-sfprorounded">
+                    <p className="font-sfpro">
                       {service.name === 'contacto' ? '' : 'Empieza en'}
                     </p>
                     <p className="font-lufgaBold text-4xl tracking-tight">
@@ -110,7 +109,7 @@ const ServiceSection = () => {
                     </p>
                   </div>
                   <div className="mt-3">
-                    <h2 className="text-base font-sfprorounded">
+                    <h2 className="text-base font-sfpro">
                       {service.description}
                     </h2>
                   </div>

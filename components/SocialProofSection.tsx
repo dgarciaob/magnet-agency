@@ -28,7 +28,7 @@ const SocialProofSection = () => {
   return (
     <div className="flex flex-col">
       <div className="mb-16">
-        <h2 className="font-lufgaBold lg:text-4xl text-center text-[#5746F4]">
+        <h2 className="font-sfprobold lg:text-4xl text-center text-[#5746F4]">
           Confiaron en nosotros
         </h2>
       </div>
