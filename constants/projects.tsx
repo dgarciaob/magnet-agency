@@ -8,7 +8,7 @@ export const projects = [
     descripcion:
       'Un nuevo comienzo. Acompáñanos a ser líderes globales en transformación de emprendedores. Conoce más sobre magnet y su universo creativo aquí.',
     descripcionModal:
-      'Nuestra agencia de diseño y desarrollo. El mejor ejemplo de nuestro estándar de trabajo y de la calidad que obtendrás. Diseño y Desarrollo completo de marca.',
+      'El mejor ejemplo de nuestro estándar de trabajo y de la calidad que obtendrás. Diseño y Desarrollo completo de marca.',
     serviceType: 'Brand - Webdev',
     linkToWeb: '/',
     modalImgOne: '/images/magnet1.png',

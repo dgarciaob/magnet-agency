@@ -1,16 +1,8 @@
 import Image from 'next/image';
 import { X, ArrowRight } from 'lucide-react';
-import {
-  motion,
-  useMotionValue,
-  useSpring,
-  useTransform,
-  useScroll,
-  AnimatePresence,
-} from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { projects } from '@/constants/projects';
-import { colors } from '@/constants/colors';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 interface ModalProps {
   id: number | null;
@@ -23,7 +15,7 @@ const Modal = ({ id, onClose }: ModalProps) => {
   return (
     <AnimatePresence>
       <motion.div
-        className="h-screen w-screen z-[9999] backdrop-blur-md fixed top-0 left-0 flex items-center justify-center"
+        className="h-screen w-full z-[9999] backdrop-blur-md fixed top-0 left-0 flex items-center justify-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}

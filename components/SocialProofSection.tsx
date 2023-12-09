@@ -1,12 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
-import {
-  motion,
-  useMotionValue,
-  useSpring,
-  useTransform,
-  useScroll,
-} from 'framer-motion';
+import { motion } from 'framer-motion';
 
 import { proofImages } from '@/constants/proofImages';
 
@@ -28,11 +22,11 @@ const SocialProofSection = () => {
   return (
     <div className="flex flex-col">
       <div className="mb-16">
-        <h2 className="font-sfprobold lg:text-4xl text-center text-[#5746F4]">
+        <h2 className="font-sfprobold lg:text-4xl text-3xl text-center text-[#5746F4]">
           Confiaron en nosotros
         </h2>
       </div>
-      <div className="flex flex-row space-x-8 items-center justify-center">
+      <div className="lg:flex lg:flex-row lg:space-x-8 lg:items-center lg:justify-center grid grid-cols-3 gap-y-8 justify-items-center">
         {proofImages.map((partner, index) => {
           return (
             <motion.div

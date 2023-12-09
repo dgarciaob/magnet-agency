@@ -7,17 +7,14 @@ import RouteTitle from './RouteTitle';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import '@/components/css/ProjectSection.css';
 import Modal from './Modal';
-import {
-  motion,
-  useMotionValue,
-  useSpring,
-  useTransform,
-  useScroll,
-} from 'framer-motion';
+import { motion, useScroll } from 'framer-motion';
+import useWindowSize from '@/hooks/useWindowSize';
 
 const ProjectSection = () => {
   const ref = React.useRef<HTMLDivElement>(null);
   const projectContainerRef = React.useRef<HTMLDivElement>(null);
+  const { width } = useWindowSize();
+
   const handleNext = () => {
     if (projectContainerRef.current) {
       projectContainerRef.current.scrollTo({
@@ -57,62 +54,22 @@ const ProjectSection = () => {
     setIsModalOpen(false);
   };
 
-  // code for tilt hover effect
-
-  // const x = useMotionValue(0);
-  // const y = useMotionValue(0);
-
-  // const mouseXSpring = useSpring(x);
-  // const mouseYSpring = useSpring(y);
-
-  // const rotateX = useTransform(
-  //   mouseYSpring,
-  //   [-0.5, 0.5],
-  //   ['17.5deg', '-17.5deg'],
-  // );
-  // const rotateY = useTransform(
-  //   mouseXSpring,
-  //   [-0.5, 0.5],
-  //   ['-17.5deg', '17.5deg'],
-  // );
-
-  // const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-  //   const rect = e.currentTarget.getBoundingClientRect();
-
-  //   const width = rect.width;
-  //   const height = rect.height;
-
-  //   const mouseX = e.clientX - rect.left;
-  //   const mouseY = e.clientY - rect.top;
-
-  //   const xPct = mouseX / width - 0.5;
-  //   const yPct = mouseY / height - 0.5;
-
-  //   x.set(xPct);
-  //   y.set(yPct);
-  // };
-
-  // const handleMouseLeave = () => {
-  //   x.set(0);
-  //   y.set(0);
-  // };
-
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['0 1', '1 1'],
   });
 
   return (
-    <motion.div
+    <div
       ref={ref}
-      style={{ scale: scrollYProgress, opacity: scrollYProgress }}
+      // style={{ scale: scrollYProgress, opacity: scrollYProgress }}
     >
-      <div className="flex flex-row justify-between items-center align-middle mb-4 mt-24">
+      <div className="flex flex-row justify-between items-center align-middle md:mb-4 mb-8 mt-24">
         <RouteTitle
           title="Proyectos"
           description="Nuestras más recientes historias"
         />
-        <div className="flex justify-end mt-32">
+        <div className="sm:flex justify-end mt-32 hidden">
           <div className="h-[56px] w-[120px] rounded-full bg-white flex items-center justify-between align-middle px-4">
             <button
               onClick={handlePrev}
@@ -134,11 +91,7 @@ const ProjectSection = () => {
       <div>
         <div
           ref={projectContainerRef}
-          // initial={{ opacity: 0 }}
-          // whileInView={{ opacity: 1 }}
-          // viewport={{ once: true }}
-          // transition={{ duration: 1 }}
-          className="flex flex-row scrollbar-hide space-x-8 snap-x snap-mandatory overflow-y-hidden"
+          className="md:flex md:flex-row flex flex-col scrollbar-hide md:space-x-8 snap-x snap-mandatory overflow-y-hidden"
         >
           {projects.map((project) => {
             const textClass = getTextClass(project.alt);
@@ -146,17 +99,10 @@ const ProjectSection = () => {
             return (
               <div
                 key={project.id}
-                // onMouseMove={handleMouseMove}
-                // onMouseLeave={handleMouseLeave}
-                // style={{
-                //   rotateY,
-                //   rotateX,
-                //   transformStyle: 'preserve-3d',
-                // }}
                 className="snap-start relative rounded-[50px] cursor-pointer"
                 onClick={() => handleProjectClick(project.id)}
               >
-                <div className="w-[530px] h-[585px]">
+                <div className="md:w-[530px] md:h-[585px] w-[380px] h-[440px]">
                   <Image
                     src={project.bgImg}
                     alt={project.alt}
@@ -199,7 +145,7 @@ const ProjectSection = () => {
           <Modal id={selectedId} onClose={handleModalClose} />
         </div>
       )}
-    </motion.div>
+    </div>
   );
 };
 

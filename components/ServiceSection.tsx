@@ -7,13 +7,7 @@ import RouteTitle from './RouteTitle';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import '@/components/css/ProjectSection.css';
 import { cn } from '@/lib/utils';
-import {
-  motion,
-  useMotionValue,
-  useSpring,
-  useTransform,
-  useScroll,
-} from 'framer-motion';
+import { motion, useScroll } from 'framer-motion';
 
 const ServiceSection = () => {
   const ref = React.useRef<HTMLDivElement>(null);

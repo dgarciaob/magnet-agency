@@ -33,6 +33,6 @@ export const services = [
     alt: "Subscription's Background",
     cost: '$4999/mes',
     description:
-      'Contrata nuestros servicios acorde con tu necesidad continua de diseño. Una suscripción ilimitada.',
+      'Contrata nuestros servicios acorde con tu necesidad continua de diseño. Suscripción por 100 horas de diseño al mes.',
   },
 ];

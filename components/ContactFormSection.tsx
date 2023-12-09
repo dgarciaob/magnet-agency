@@ -60,21 +60,30 @@ const ContactFormSection = () => {
       ref={ref}
       style={{ scale: scrollYProgress, opacity: scrollYProgress }}
     >
-      <div className="p-8 rounded-xl bg-[#1F1F1F] w-full h-full flex flex-row justify-between">
-        <div className="bg-gradient-to-b from-[#FFFFFF] to-[#F7FFFA] rounded-lg w-1/3 p-8 shadow-lg">
-          <h2 className="text-4xl font-sfprobold font-bold text-[#1F1F1F]">
+      <div className="p-8 rounded-xl w-full h-full flex flex-row justify-between">
+        <div className="bg-[#1F1F1F] rounded-lg w-1/3 p-8 shadow-lg">
+          <h2 className="text-4xl font-sfprobold font-bold text-white">
             ¿Alguna consulta? <br />
             Ayudamos a cumplir tu{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7346F4] to-[#4603FF]">
+            <span className="text-[#FFFCD6]">
               <TypeAnimation
-                sequence={['sueño', 2000, 'meta', 2000, 'visión', 2000]}
+                sequence={[
+                  'sueño',
+                  2000,
+                  'meta',
+                  2000,
+                  'visión',
+                  2000,
+                  'objetivo',
+                  2000,
+                ]}
                 wrapper="span"
                 speed={50}
                 repeat={Infinity}
               />
             </span>
           </h2>
-          <p className="text-xl font-sfpro text-slate-500 mt-4">
+          <p className="text-xl font-sfpro text-slate-300 mt-4">
             ¡Déjanos un mensaje!
           </p>
         </div>
@@ -91,7 +100,7 @@ const ContactFormSection = () => {
                   render={({ field }) => {
                     return (
                       <FormItem>
-                        <FormLabel className="text-[#F4FFF8]">
+                        <FormLabel className="text-[#1F1F1F]">
                           Nombre Completo
                         </FormLabel>
                         <FormControl>
@@ -108,7 +117,7 @@ const ContactFormSection = () => {
                   render={({ field }) => {
                     return (
                       <FormItem>
-                        <FormLabel className="text-[#F4FFF8]">
+                        <FormLabel className="text-[#1F1F1F]">
                           Teléfono
                         </FormLabel>
                         <FormControl>
@@ -125,7 +134,7 @@ const ContactFormSection = () => {
                   render={({ field }) => {
                     return (
                       <FormItem>
-                        <FormLabel className="text-[#F4FFF8]">Correo</FormLabel>
+                        <FormLabel className="text-[#1F1F1F]">Correo</FormLabel>
                         <FormControl>
                           <Input placeholder="Escribe tu correo" {...field} />
                         </FormControl>
@@ -140,7 +149,7 @@ const ContactFormSection = () => {
                   render={({ field }) => {
                     return (
                       <FormItem>
-                        <FormLabel className="text-[#F4FFF8]">
+                        <FormLabel className="text-[#1F1F1F]">
                           Mensaje
                         </FormLabel>
                         <FormControl>

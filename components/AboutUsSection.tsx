@@ -40,7 +40,7 @@ const AboutUsSection = () => {
           description="Las personas que forman magnet"
         />
       </div>
-      <div className="relative w-screen h-screen flex items-center justify-center">
+      <div className="relative w-full h-screen flex items-center justify-center">
         <Image
           src="/images/BG4X.png"
           alt="Background Magnet"
@@ -113,25 +113,34 @@ const AboutUsSection = () => {
         )}
       </div>
 
-      <div className="flex flex-row justify-between mt-20">
+      <div className="flex flex-row justify-between mt-20 mx-auto w-full max-w-screen-2xl px-4 lg:px-[70px]">
         {team.map((founder) => {
           return (
-            <div key={founder.name} className="relative">
-              <div className="h-[310px] w-1/4">
-                <Image
-                  src={founder.image}
-                  alt={founder.alt}
-                  fill
-                  className="rounded-[25px] object-cover"
-                />
-              </div>
-              <div className="absolute bottom-0 w-full h-1/3 backdrop-blur-md rounded-b-[25px] flex items-center justify-center">
-                <div className="flex flex-row">
-                  <h2 className="text-xl font-sfprorounded font-bold text-white">
-                    {founder.name} ·{' '}
+            <div
+              key={founder.name}
+              className="relative overflow-x-hidden w-[310px] h-full"
+            >
+              <Image
+                src={founder.image}
+                alt={founder.alt}
+                width={310}
+                height={310}
+                className="rounded-[25px] object-cover"
+              />
+
+              <div className="absolute bottom-0 w-full h-[25%] backdrop-blur-md rounded-b-[25px] px-4 pt-4">
+                <div className="flex flex-row items-center space-x-2">
+                  <h2 className="text-base font-sfprobold text-white">
+                    {founder.name}
                   </h2>
-                  <p className="text-base font-sfprorounded text-white">
+                  <span className="text-white">·</span>
+                  <p className="text-base font-sfpro text-white">
                     {founder.role}
+                  </p>
+                </div>
+                <div>
+                  <p className="text-base font-sfpro text-white">
+                    {founder.phrase}
                   </p>
                 </div>
               </div>
