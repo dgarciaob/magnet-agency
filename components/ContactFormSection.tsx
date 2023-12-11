@@ -1,8 +1,8 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
-import { motion, useScroll } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 import * as z from 'zod';
 import { useForm } from 'react-hook-form';
@@ -19,6 +19,11 @@ import {
 import { Button } from '@/components/ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
+import { Oval } from 'react-loader-spinner';
+import { Check } from 'lucide-react';
+
+import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
+import type { Database } from '../database.types';
 
 const contactFormSchema = z.object({
   nombre: z
@@ -33,6 +38,11 @@ const contactFormSchema = z.object({
 });
 
 const ContactFormSection = () => {
+  const supabase = createClientComponentClient<Database>();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
   const form = useForm<z.infer<typeof contactFormSchema>>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -43,8 +53,23 @@ const ContactFormSection = () => {
     },
   });
 
-  const onSubmit = (values: z.infer<typeof contactFormSchema>) => {
-    console.log(values);
+  const onSubmit = async (values: z.infer<typeof contactFormSchema>) => {
+    setIsSubmitting(true);
+    setIsError(false);
+    try {
+      await supabase.from('prospects').insert({
+        email: values.email,
+        name: values.nombre,
+        phone: values.celular,
+        requirement: values.mensaje,
+      });
+      setShowSuccessMessage(true);
+      setTimeout(() => setShowSuccessMessage(false), 2000);
+    } catch (error) {
+      setIsError(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -160,8 +185,49 @@ const ContactFormSection = () => {
                   }}
                 />
                 <Button type="submit" className="rounded-md w-full font-sfpro">
-                  Enviar
+                  {isSubmitting ? (
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 1 }}
+                    >
+                      <Oval
+                        height={20}
+                        width={20}
+                        color="#F7FFFA"
+                        wrapperStyle={{}}
+                        wrapperClass=""
+                        visible={true}
+                        ariaLabel="oval-loading"
+                        secondaryColor="#D7E4E5"
+                        strokeWidth={5}
+                        strokeWidthSecondary={5}
+                      />
+                    </motion.div>
+                  ) : showSuccessMessage ? (
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 1 }}
+                    >
+                      <Check className="text-green-500" />
+                    </motion.div>
+                  ) : (
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 1 }}
+                    >
+                      Enviar
+                    </motion.div>
+                  )}
                 </Button>
+                {isError && (
+                  <p className="text-red-500 text-sm">
+                    Hubo un error al enviar tu mensaje, por favor intenta de
+                    nuevo.
+                  </p>
+                )}
               </form>
             </Form>
           </div>

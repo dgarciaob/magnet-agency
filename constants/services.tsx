@@ -20,9 +20,9 @@ export const services = [
   {
     id: 3,
     name: 'appdev',
-    bgImg: '/images/4xcardwww.png',
+    bgImg: '/images/4xcardappdev.png',
     alt: "App Dev's Background",
-    cost: '$1999',
+    cost: '$1499',
     description:
       'Digitaliza tu experiencia con una app que te permita llegar a más clientes y escalar tu negocio.',
   },
@@ -31,7 +31,7 @@ export const services = [
     name: 'suscripción',
     bgImg: '/images/4xcardsub.png',
     alt: "Subscription's Background",
-    cost: '$4999/mes',
+    cost: '$3499/mes',
     description:
       'Contrata nuestros servicios acorde con tu necesidad continua de diseño. Suscripción por 100 horas de diseño al mes.',
   },
