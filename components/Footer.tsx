@@ -52,15 +52,6 @@ function Footer() {
                       Portafolio
                     </Link>
                   </li>
-                  <li>
-                    <Link
-                      href="#faqs"
-                      scroll
-                      className="hover:underline scroll-smooth"
-                    >
-                      FAQs
-                    </Link>
-                  </li>
                 </ul>
               </div>
               <div>

@@ -106,7 +106,13 @@ const Navbar = () => {
                     key={navscreen.name}
                     className="transition ease-in-out hover:text-[#5746F4] hover:scale-110 hover:-translate-y-1"
                   >
-                    <Link href={navscreen.linkTo}>{navscreen.name}</Link>
+                    <Link
+                      href={navscreen.linkTo}
+                      scroll
+                      className="scroll-smooth"
+                    >
+                      {navscreen.name}
+                    </Link>
                   </div>
                 );
               })}

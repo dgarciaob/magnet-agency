@@ -80,8 +80,8 @@ const ContactFormSection = () => {
       transition={{ duration: 1.3 }}
       viewport={{ once: true }}
     >
-      <div className="p-8 rounded-xl w-full h-full flex flex-row justify-between">
-        <div className="bg-[#1F1F1F] rounded-lg w-1/3 p-8 shadow-lg">
+      <div className="md:p-8 p-1 rounded-xl w-full h-full md:flex md:flex-row md:items-stretch md:space-y-0 justify-between flex flex-col items-center space-y-10">
+        <div className="bg-[#1F1F1F] rounded-lg md:w-1/3 p-8 shadow-lg">
           <h2 className="text-4xl font-sfprobold font-bold text-white">
             ¿Alguna consulta? <br />
             Ayudamos a cumplir tu{' '}
@@ -107,7 +107,7 @@ const ContactFormSection = () => {
             ¡Déjanos un mensaje!
           </p>
         </div>
-        <div className="w-2/3 flex justify-center items-center font-sfpro">
+        <div className="md:w-2/3 flex justify-center items-center w-full font-sfpro">
           <div className="max-w-lg w-full">
             <Form {...form}>
               <form

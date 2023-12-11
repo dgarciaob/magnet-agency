@@ -1,16 +1,15 @@
 'use client';
 
 import { services } from '@/constants/services';
-import React, { useRef } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import RouteTitle from './RouteTitle';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import '@/components/css/ProjectSection.css';
 import { cn } from '@/lib/utils';
-import { motion, useScroll } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const ServiceSection = () => {
-  const ref = React.useRef<HTMLDivElement>(null);
   const projectContainerRef = React.useRef<HTMLDivElement>(null);
   const handleNext = () => {
     if (projectContainerRef.current) {
@@ -35,21 +34,19 @@ const ServiceSection = () => {
     }
   };
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['0 1', '1 1'],
-  });
   return (
     <motion.div
-      ref={ref}
-      style={{ scale: scrollYProgress, opacity: scrollYProgress }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.3 }}
+      viewport={{ once: true }}
     >
       <div className="flex flex-row justify-between items-center align-middle mb-4 mt-24">
         <RouteTitle
           title="Servicios"
           description="Planes acorde a lo que buscas"
         />
-        <div className="flex justify-end mt-32">
+        <div className="sm:flex justify-end mt-32 hidden">
           <div className="h-[56px] w-[120px] rounded-full bg-white flex items-center justify-between align-middle px-4">
             <button
               onClick={handlePrev}
@@ -67,8 +64,9 @@ const ServiceSection = () => {
           </div>
         </div>
       </div>
+
       <div
-        className="flex flex-row scrollbar-hide space-x-8 snap-x snap-mandatory overflow-y-hidden"
+        className="md:flex md:flex-row md:space-x-8 md:snap-x md:snap-mandatory md:space-y-0 flex flex-col space-y-6 scrollbar-hide overflow-y-hidden"
         ref={projectContainerRef}
       >
         {services.map((service) => {
@@ -78,7 +76,7 @@ const ServiceSection = () => {
               key={service.id}
               className="snap-start relative rounded-[25px] cursor-pointer"
             >
-              <div className="w-[420px] h-[585px]">
+              <div className="md:w-[420px] md:h-[585px] w-[380px] h-[530px]">
                 <Image
                   src={service.bgImg}
                   alt={service.alt}

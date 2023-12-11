@@ -2,13 +2,7 @@ import React, { useState, useEffect } from 'react';
 import RouteTitle from './RouteTitle';
 import { team } from '@/constants/team';
 import Image from 'next/image';
-import {
-  motion,
-  useMotionValue,
-  useSpring,
-  useTransform,
-  useScroll,
-} from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const AboutUsSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -113,7 +107,7 @@ const AboutUsSection = () => {
         )}
       </div>
 
-      <div className="flex flex-row justify-between mt-20 mx-auto w-full max-w-screen-2xl px-4 lg:px-[70px]">
+      <div className="md:flex md:flex-row md:space-y-0 justify-between flex flex-col items-center space-y-6 mt-20 mx-auto w-full max-w-screen-2xl px-4 lg:px-[70px]">
         {team.map((founder) => {
           return (
             <div

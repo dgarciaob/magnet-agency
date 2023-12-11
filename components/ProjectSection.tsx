@@ -7,13 +7,11 @@ import RouteTitle from './RouteTitle';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import '@/components/css/ProjectSection.css';
 import Modal from './Modal';
-import { motion, useScroll } from 'framer-motion';
-import useWindowSize from '@/hooks/useWindowSize';
+import { motion } from 'framer-motion';
 
 const ProjectSection = () => {
   const ref = React.useRef<HTMLDivElement>(null);
   const projectContainerRef = React.useRef<HTMLDivElement>(null);
-  const { width } = useWindowSize();
 
   const handleNext = () => {
     if (projectContainerRef.current) {
@@ -54,15 +52,13 @@ const ProjectSection = () => {
     setIsModalOpen(false);
   };
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['0 1', '1 1'],
-  });
-
   return (
-    <div
+    <motion.div
       ref={ref}
-      // style={{ scale: scrollYProgress, opacity: scrollYProgress }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.3 }}
+      viewport={{ once: true }}
     >
       <div className="flex flex-row justify-between items-center align-middle md:mb-4 mb-8 mt-24">
         <RouteTitle
@@ -91,7 +87,7 @@ const ProjectSection = () => {
       <div>
         <div
           ref={projectContainerRef}
-          className="md:flex md:flex-row flex flex-col scrollbar-hide md:space-x-8 snap-x snap-mandatory overflow-y-hidden"
+          className="md:flex md:flex-row md:space-x-8 md:snap-x md:snap-mandatory md:space-y-0 flex flex-col space-y-6 scrollbar-hide overflow-y-hidden"
         >
           {projects.map((project) => {
             const textClass = getTextClass(project.alt);
@@ -145,7 +141,7 @@ const ProjectSection = () => {
           <Modal id={selectedId} onClose={handleModalClose} />
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 
