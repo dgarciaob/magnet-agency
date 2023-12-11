@@ -82,7 +82,7 @@ const ContactFormSection = () => {
     >
       <div className="md:p-8 p-1 rounded-xl w-full h-full md:flex md:flex-row md:items-stretch md:space-y-0 justify-between flex flex-col items-center space-y-10">
         <div className="bg-[#1F1F1F] rounded-lg md:w-1/3 p-8 shadow-lg">
-          <h2 className="text-4xl font-sfprobold font-bold text-white">
+          <h2 className="md:text-4xl text-3xl font-sfprobold font-bold text-white">
             ¿Alguna consulta? <br />
             Ayudamos a cumplir tu{' '}
             <span className="text-[#FFFCD6]">

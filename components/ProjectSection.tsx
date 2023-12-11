@@ -98,7 +98,7 @@ const ProjectSection = () => {
                 className="snap-start relative rounded-[50px] cursor-pointer"
                 onClick={() => handleProjectClick(project.id)}
               >
-                <div className="md:w-[530px] md:h-[585px] w-[380px] h-[440px]">
+                <div className="md:w-[530px] md:h-[585px] w-[350px] h-[440px]">
                   <Image
                     src={project.bgImg}
                     alt={project.alt}

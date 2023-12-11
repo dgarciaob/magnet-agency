@@ -37,7 +37,7 @@ export const projects = [
   },
   {
     id: 3,
-    name: 'kuk (kuuuuuuuukkk)',
+    name: 'kuk (kuuuuuukk)',
     bgImg: '/images/kuk.png',
     alt: 'Kuk Logo',
     logoImg: '/logos/logokuk.png',
