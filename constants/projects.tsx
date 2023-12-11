@@ -96,7 +96,7 @@ export const projects = [
     alt: 'Ace Padel Logo',
     logoImg: '/logos/logoacepadel.png',
     descripcion:
-      'Fomentando la práctica del deporte a través de una SaaS. Maneja tus canchas, a tu medida y únete al juego hoy mismo. Gestiona tu negocio con Ace, aquí.',
+      'Software as a Service. Maneja tus canchas, a tu medida y únete al juego hoy mismo. Gestiona tu negocio con Ace, aquí.',
     descripcionModal:
       'UX/UI y desarrollo SaaS para plataforma de gestión de canchas de pádel. Diseño de interfaz y experiencia de usuario & Desarrollo Software as a Service.',
     serviceType: 'Webdev',
