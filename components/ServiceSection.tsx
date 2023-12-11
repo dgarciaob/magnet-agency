@@ -76,7 +76,7 @@ const ServiceSection = () => {
               key={service.id}
               className="snap-start relative rounded-[25px] cursor-pointer"
             >
-              <div className="md:w-[420px] md:h-[585px] w-[380px] h-[530px]">
+              <div className="md:w-[420px] md:h-[585px] w-[350px] h-[530px]">
                 <Image
                   src={service.bgImg}
                   alt={service.alt}
