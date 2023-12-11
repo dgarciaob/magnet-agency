@@ -87,16 +87,7 @@ const ContactFormSection = () => {
             Ayudamos a cumplir tu{' '}
             <span className="text-[#FFFCD6]">
               <TypeAnimation
-                sequence={[
-                  'sueño',
-                  2000,
-                  'meta',
-                  2000,
-                  'visión',
-                  2000,
-                  'objetivo',
-                  2000,
-                ]}
+                sequence={['sueño', 2000, 'meta', 2000, 'visión', 2000]}
                 wrapper="span"
                 speed={50}
                 repeat={Infinity}

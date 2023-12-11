@@ -42,7 +42,7 @@ export const projects = [
     alt: 'Kuk Logo',
     logoImg: '/logos/logokuk.png',
     descripcion:
-      'La diversión de ver las coloridas fotos del recetario de mamá son traídas a la era digital con Kuk. Tu nuevo compañero de cocina a un tap de distancia.',
+      'La diversión de ver las fotos del recetario de mamá son traídas a la era digital con Kuk. Tu compañero de cocina a un tap de distancia.',
     descripcionModal:
       'Kuk, app para principiantes en la cocina casera. Proporciona un diario personalizable de comidas para manejar tiempo y dinero.',
     serviceType: 'UX/UI',
