@@ -29,7 +29,10 @@ const contactFormSchema = z.object({
   nombre: z
     .string()
     .min(3, { message: 'Tu nombre debe tener al menos 3 caracteres' }),
-  celular: z.string().min(9, { message: 'Ingresa un número válido' }),
+  celular: z
+    .string()
+    .min(9, { message: 'Ingresa un número válido' })
+    .max(9, { message: 'Ingresa un número válido' }),
   email: z.string().email({ message: 'Ingresa un correo válido' }),
   mensaje: z
     .string()
