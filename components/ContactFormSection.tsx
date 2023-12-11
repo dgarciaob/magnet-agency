@@ -47,18 +47,13 @@ const ContactFormSection = () => {
     console.log(values);
   };
 
-  const ref = React.useRef<HTMLDivElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['0 1', '1 0.9'],
-  });
-
   return (
     <motion.div
       className="pt-20"
-      ref={ref}
-      style={{ scale: scrollYProgress, opacity: scrollYProgress }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.3 }}
+      viewport={{ once: true }}
     >
       <div className="p-8 rounded-xl w-full h-full flex flex-row justify-between">
         <div className="bg-[#1F1F1F] rounded-lg w-1/3 p-8 shadow-lg">

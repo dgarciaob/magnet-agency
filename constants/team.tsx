@@ -3,7 +3,7 @@ export const team = [
     name: 'Diego García',
     image: '/images/profilePicDiego.png',
     alt: 'Diego García',
-    phrase: 'sales & really junior dev',
+    phrase: 'sales & front junior dev',
     role: 'CEO | Co-Founder',
   },
   {
