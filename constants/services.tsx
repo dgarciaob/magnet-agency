@@ -6,7 +6,7 @@ export const services = [
     alt: "Brand's Background",
     cost: '$699',
     description:
-      'Tu nueva gran historia empieza aquí. Manifestamos tu marca como un ícono memorable que disfrutarás ver crecer.',
+      'Manifestamos tu marca como un ícono memorable que disfrutarás ver crecer. Desarrollo completo de identidad de marca.',
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ export const services = [
     name: 'suscripción',
     bgImg: '/images/4xcardsub.png',
     alt: "Subscription's Background",
-    cost: '$3499/mes',
+    cost: '$2499/mes',
     description:
       'Contrata nuestros servicios acorde con tu necesidad continua de diseño. Suscripción por 100 horas de diseño al mes.',
   },

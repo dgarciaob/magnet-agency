@@ -35,17 +35,29 @@ function Footer() {
                 </h2>
                 <ul className="text-[#F6F5FF]/80 dark:text-gray-400">
                   <li className="mb-4">
-                    <Link href="/" className="hover:underline">
+                    <Link
+                      href="#nosotros"
+                      scroll
+                      className="hover:underline scroll-smooth"
+                    >
                       Quiénes Somos
                     </Link>
                   </li>
                   <li className="mb-4">
-                    <Link href="/" className="hover:underline">
+                    <Link
+                      href="#proyectos"
+                      scroll
+                      className="hover:underline scroll-smooth"
+                    >
                       Portafolio
                     </Link>
                   </li>
                   <li>
-                    <Link href="/" className="hover:underline">
+                    <Link
+                      href="#faqs"
+                      scroll
+                      className="hover:underline scroll-smooth"
+                    >
                       FAQs
                     </Link>
                   </li>
@@ -57,13 +69,12 @@ function Footer() {
                 </h2>
                 <ul className="text-[#F6F5FF]/80 dark:text-gray-400">
                   <li className="mb-4">
-                    <Link href="/" className="hover:underline ">
-                      Planes
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/" className="hover:underline">
-                      Tipos de Servicios
+                    <Link
+                      href="#servicios"
+                      scroll
+                      className="hover:underline scroll-smooth"
+                    >
+                      Nuestros Servicios
                     </Link>
                   </li>
                 </ul>

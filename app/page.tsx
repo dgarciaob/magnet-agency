@@ -32,7 +32,7 @@ export default function Home() {
             <Link href="#contacto" scroll className="scroll-smooth">
               <Button
                 variant="default"
-                className="font-sfpro h-[56px] md:w-[200px] w-full text-xl"
+                className="font-sfpro h-[56px] md:w-[200px] w-full text-xl shadow-lg"
               >
                 Agendar cita
               </Button>
@@ -41,7 +41,7 @@ export default function Home() {
             <Link href="#proyectos" className="scroll-smooth">
               <Button
                 variant="secondary"
-                className="font-sfpro h-[56px] md:w-[200px] w-full text-xl "
+                className="font-sfpro h-[56px] md:w-[200px] w-full text-xl shadow-sm"
               >
                 Descubre <ArrowDown className="ml-3" />
               </Button>
