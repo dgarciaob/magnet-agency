@@ -30,11 +30,7 @@ const ProjectSection = () => {
     }
   };
   const getTextClass = (alt: string) => {
-    if (
-      alt === 'Spaw Logo' ||
-      alt === 'Zerendor Logo' ||
-      alt === 'Ace Padel Logo'
-    ) {
+    if (alt === 'Spaw Logo' || alt === 'Zerendor Logo' || alt === 'IUI Logo') {
       return 'text-white';
     }
     return 'text-black';

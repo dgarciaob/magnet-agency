@@ -91,20 +91,21 @@ export const projects = [
   },
   {
     id: 6,
-    name: 'ace padel',
+    name: 'Interpreters UI',
     bgImg: '/images/acepadel.png',
-    alt: 'Ace Padel Logo',
+    alt: 'IUI Logo',
     logoImg: '/logos/logoacepadel.png',
     descripcion:
-      'Software as a Service. Maneja tus canchas, a tu medida y únete al juego hoy mismo. Gestiona tu negocio con Ace, aquí.',
+      'Diseño UX/UI en la industria de Interpreters. Diseño de interfaz y experiencia de usuario para dashboard de interpretadores.',
     descripcionModal:
-      'UX/UI y desarrollo SaaS para plataforma de gestión de canchas de pádel. Diseño de interfaz y experiencia de usuario & Desarrollo Software as a Service.',
-    serviceType: 'Webdev',
-    linkToWeb: 'https://www.zerendor.com/',
-    modalImgOne: '',
-    modalImgTwo: '',
+      'Dashboards for over-the-phone interpretation. Renovation of the user interface for the interpreters dashboard.',
+    serviceType: 'UX/UI',
+    linkToWeb:
+      'https://www.behance.net/gallery/172288583/IUI-a-dashboard-for-interpretation',
+    modalImgOne: '/images/iui1.png',
+    modalImgTwo: '/images/iui2.png',
     modalImgThree: '',
     modalImgFour: '',
-    modalImgFive: '',
+    modalImgFive: '/images/iui5.png',
   },
 ];
