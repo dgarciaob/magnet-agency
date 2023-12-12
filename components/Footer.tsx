@@ -161,7 +161,7 @@ function Footer() {
                 </svg>
               </Link>
               <Link
-                href="https://dribbble.com/magnetperu/about"
+                href="https://dribbble.com/magnetperu"
                 className="text-white/80 hover:text-white/40 transition duration-300"
                 target="_blank"
                 rel="noopener noreferrer"
