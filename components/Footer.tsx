@@ -142,8 +142,10 @@ function Footer() {
                 </svg>
               </Link>
               <Link
-                href="#"
+                href="https://github.com/Magnet-Agency"
                 className="text-white/80 hover:text-white/40 transition duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <svg
                   className="w-5 h-5"
@@ -159,8 +161,10 @@ function Footer() {
                 </svg>
               </Link>
               <Link
-                href="#"
+                href="https://dribbble.com/magnetperu/about"
                 className="text-white/80 hover:text-white/40 transition duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <svg
                   className="w-5 h-5"
