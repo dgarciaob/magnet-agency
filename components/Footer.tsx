@@ -108,8 +108,10 @@ function Footer() {
             </span>
             <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
               <Link
-                href="#"
+                href="https://www.instagram.com/magnetperu/"
                 className="text-white/80 hover:text-white/40  transition duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <svg
                   className="w-5 h-5"
@@ -125,8 +127,10 @@ function Footer() {
                 </svg>
               </Link>
               <Link
-                href="#"
+                href="https://twitter.com/magnetperu"
                 className="text-white/80 hover:text-white/40 transition duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <svg
                   className="w-5 h-5"
