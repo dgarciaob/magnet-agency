@@ -3,7 +3,6 @@
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 import { motion } from 'framer-motion';
-import Footer from '@/components/Footer';
 import Link from 'next/link';
 import React from 'react';
 import ServiceSection from '@/components/ServiceSection';
@@ -16,7 +15,7 @@ import SocialProofSection from '@/components/SocialProofSection';
 
 export default function Home() {
   return (
-    <div>
+    <main>
       <div
         className="md:grid md:grid-cols-2 flex flex-col items-center md:pt-36 pt-20 md:h-screen w-full mx-auto max-w-screen-2xl lg:px-[70px]"
         id="inicio"
@@ -96,8 +95,6 @@ export default function Home() {
       >
         <ContactFormSection />
       </div>
-
-      <Footer />
-    </div>
+    </main>
   );
 }

@@ -2,10 +2,11 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'Magnet',
-  description: 'El partner digital para tu siguiente gran idea.',
+  description: 'Agencia de Diseño y Desarrollo Web.',
 };
 
 export default function RootLayout({
@@ -21,6 +22,7 @@ export default function RootLayout({
         <main className="relative flex flex-col w-full min-h-screen">
           <Navbar />
           <div className="flex-1">{children}</div>
+          <Footer />
         </main>
       </body>
     </html>
