@@ -16,6 +16,7 @@ export const projects = [
     modalImgThree: '/images/magnet3.png',
     modalImgFour: '/logos/white-logo.svg',
     modalImgFive: '/images/magnet5.png',
+    pathToPage: '/magnet',
   },
   {
     id: 2,
@@ -34,6 +35,7 @@ export const projects = [
     modalImgThree: '/images/spaw3.png',
     modalImgFour: '/images/spaw4.png',
     modalImgFive: '/images/spaw5.png',
+    pathToPage: '/spaw',
   },
   {
     id: 3,
@@ -52,6 +54,7 @@ export const projects = [
     modalImgThree: '/images/kuk3.png',
     modalImgFour: '/images/kuk4.png',
     modalImgFive: '/images/kuk5.png',
+    pathToPage: '/kuk',
   },
   {
     id: 4,
@@ -70,6 +73,7 @@ export const projects = [
     modalImgThree: '/images/zere3.png',
     modalImgFour: '/images/zere4.png',
     modalImgFive: '/images/zere5.png',
+    pathToPage: '/zere',
   },
   {
     id: 5,
@@ -88,6 +92,7 @@ export const projects = [
     modalImgThree: '/images/giko3.png',
     modalImgFour: '/images/giko4.png',
     modalImgFive: '/images/giko5.png',
+    pathToPage: '/giko',
   },
   {
     id: 6,
@@ -107,5 +112,6 @@ export const projects = [
     modalImgThree: '',
     modalImgFour: '',
     modalImgFive: '/images/iui5.png',
+    pathToPage: '/IUI',
   },
 ];

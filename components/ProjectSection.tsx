@@ -1,4 +1,5 @@
 'use client';
+
 import { projects } from '@/constants/projects';
 import Image from 'next/image';
 import React, { useState } from 'react';
@@ -6,8 +7,8 @@ import { cn } from '@/lib/utils';
 import RouteTitle from './RouteTitle';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import '@/components/css/ProjectSection.css';
-import Modal from './Modal';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 
 const ProjectSection = () => {
   const ref = React.useRef<HTMLDivElement>(null);
@@ -36,16 +37,10 @@ const ProjectSection = () => {
     return 'text-black';
   };
 
-  const [selectedId, setSelectedId] = useState<number | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const router = useRouter();
 
-  const handleProjectClick = (id: number) => {
-    setSelectedId(id);
-    setIsModalOpen(true);
-  };
-
-  const handleModalClose = () => {
-    setIsModalOpen(false);
+  const handleProjectClick = (path: string) => {
+    router.push(`/projects/${path}`);
   };
 
   return (
@@ -56,7 +51,7 @@ const ProjectSection = () => {
       transition={{ duration: 1.3 }}
       viewport={{ once: true }}
     >
-      <div className="flex flex-row justify-between items-center align-middle md:mb-4 mb-8 mt-24">
+      <div className="flex flex-row justify-between items-center align-middle md:mb-4 mb-8 mt-24 mx-auto w-full max-w-screen-2xl px-4 lg:px-[70px]">
         <RouteTitle
           title="Proyectos"
           description="Nuestras más recientes historias"
@@ -83,7 +78,7 @@ const ProjectSection = () => {
       <div>
         <div
           ref={projectContainerRef}
-          className="md:flex md:flex-row md:space-x-8 md:snap-x md:snap-mandatory md:space-y-0 flex flex-col space-y-6 scrollbar-hide overflow-y-hidden"
+          className="md:flex md:flex-row md:space-x-8 md:snap-x md:snap-mandatory md:space-y-0 flex flex-col space-y-6 scrollbar-hide overflow-y-hidden px-4 lg:px-[70px]"
         >
           {projects.map((project) => {
             const textClass = getTextClass(project.alt);
@@ -91,8 +86,8 @@ const ProjectSection = () => {
             return (
               <div
                 key={project.id}
-                className="snap-start relative rounded-[50px] cursor-pointer"
-                onClick={() => handleProjectClick(project.id)}
+                className="snap-center relative rounded-[50px] cursor-pointer"
+                onClick={() => handleProjectClick(project.pathToPage)}
               >
                 <div className="md:w-[530px] md:h-[585px] w-[350px] h-[440px]">
                   <Image
@@ -132,11 +127,11 @@ const ProjectSection = () => {
           })}
         </div>
       </div>
-      {isModalOpen && (
+      {/* {isModalOpen && (
         <div>
           <Modal id={selectedId} onClose={handleModalClose} />
         </div>
-      )}
+      )} */}
     </motion.div>
   );
 };

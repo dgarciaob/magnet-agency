@@ -1,27 +1,77 @@
 .animate-hero-slide-up {
-	animation: hero-slide-up 1s ease-in-out;
+  animation: hero-slide-up 1s ease-in-out;
 }
 
 .animate-magnet-fade-in {
-	animation: magnet-fade-in 1s ease-in-out;
+  animation: magnet-fade-in 1s ease-in-out;
+}
+
+.hero-text-gradient {
+  background: linear-gradient(141deg, #7346f4 22.38%, #fff 182.24%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-title-gradient {
+  background: linear-gradient(180deg, #2b1470 0%, #714fd2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.first-circle {
+  border-radius: 930px;
+  border: 2px solid #fff;
+  background: linear-gradient(180deg, #fff 0%, #f6f5ff 89.35%, #fff 100%);
+}
+
+.second-circle {
+  border-radius: 1085px;
+  border: 2px solid #fff;
+  background: linear-gradient(180deg, #fff 0%, #fff 50%, #f6f5ff 100%);
+}
+
+.third-circle {
+  border-radius: 1240px;
+  border: 2px solid #fff;
+  background: linear-gradient(180deg, #fff 0%, #f6f5ff 89.35%, #fff 100%);
+}
+
+.fourth-circle {
+  border-radius: 1395px;
+  border: 2px solid #fff;
+  background: linear-gradient(180deg, #fff 0%, #fff 50%, #f6f5ff 100%);
+}
+
+.fifth-circle {
+  border-radius: 1550px;
+  border: 2px solid #fff;
+  background: linear-gradient(180deg, #fff 0%, #f6f5ff 89.35%, #fff 100%);
+}
+
+.sixth-circle {
+  border-radius: 1705px;
+  border: 2px solid #fff;
+  background: linear-gradient(180deg, #fff 0%, #fff 50%, #f6f5ff 100%);
 }
 
 @keyframes hero-slide-up {
-	0% {
-		opacity: 0;
-		transform: translateY(32px);
-	}
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
+  0% {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes magnet-fade-in {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

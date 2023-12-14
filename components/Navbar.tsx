@@ -33,7 +33,7 @@ const Navbar = () => {
       {/* Desktop Navbar */}
       <div
         className={cn(
-          'md:flex animate-navbar-slide-down transition border-transparent duration-500 ease-in-out md:flex-row md:px-[70px] py-4 md:flex-nowrap w-full z-50 fixed hidden justify-between align-middle items-center',
+          'md:flex animate-navbar-slide-down transition border-transparent duration-500 ease-in-out md:flex-row md:px-[70px] py-4 md:flex-nowrap w-full z-50 fixed hidden justify-center align-middle items-center',
           {
             'border-b': !topOfPage,
             'border-black/10': !topOfPage,
@@ -41,14 +41,6 @@ const Navbar = () => {
           },
         )}
       >
-        <Link href={'/'}>
-          <Image
-            src="/logos/white-logo.svg"
-            alt="magnet logo"
-            width={40}
-            height={40}
-          />
-        </Link>
         <div className="hidden md:flex flex-row space-x-28 font-sfprobold">
           {navscreen.map((navscreen) => {
             return (
@@ -56,7 +48,11 @@ const Navbar = () => {
                 key={navscreen.name}
                 className="transition text-black ease-in-out duration-300 hover:text-[#5746F4] hover:scale-110 hover:-translate-y-1"
               >
-                <Link href={navscreen.linkTo} scroll className="scroll-smooth">
+                <Link
+                  href={navscreen.linkTo}
+                  scroll
+                  className="scroll-smooth navtext"
+                >
                   {navscreen.name}
                 </Link>
               </div>
