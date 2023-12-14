@@ -75,12 +75,12 @@ export default function Home() {
         </div>
 
         {/* Circles */}
-        <div className="absolute top-[-35rem] left-[34rem] first-circle h-[58.125rem] w-[58.125rem] z-[-10]"></div>
-        <div className="absolute top-[-40.5rem] left-[29.5rem] second-circle h-[67.813rem] w-[67.813rem] z-[-20]"></div>
-        <div className="absolute top-[-45rem] left-[25rem] third-circle h-[77.5rem] w-[77.5rem] z-[-30]"></div>
-        <div className="absolute top-[-49.5rem] left-[20rem] fourth-circle h-[87.188rem] w-[87.188rem] z-[-40]"></div>
-        <div className="absolute top-[-54.5rem] left-[15rem] fifth-circle h-[96.875rem] w-[96.875rem] z-[-50]"></div>
-        <div className="absolute top-[-59rem] left-[10rem] sixth-circle h-[106.563rem] w-[106.563rem] z-[-60]"></div>
+        <div className="hidden lg:block lg:absolute lg:top-[-35rem] lg:left-[34rem] first-circle lg:h-[58.125rem] lg:w-[58.125rem] lg:z-[-10]"></div>
+        <div className="hidden lg:block lg:absolute lg:top-[-40.5rem] lg:left-[29.5rem] second-circle lg:h-[67.813rem] lg:w-[67.813rem] lg:z-[-20]"></div>
+        <div className="hidden lg:block lg:absolute lg:top-[-45rem] lg:left-[25rem] third-circle lg:h-[77.5rem] lg:w-[77.5rem] lg:z-[-30]"></div>
+        <div className="hidden lg:block lg:absolute lg:top-[-49.5rem] lg:left-[20rem] fourth-circle lg:h-[87.188rem] lg:w-[87.188rem] lg:z-[-40]"></div>
+        <div className="hidden lg:block lg:absolute lg:top-[-54.5rem] lg:left-[15rem] fifth-circle lg:h-[96.875rem] lg:w-[96.875rem] lg:z-[-50]"></div>
+        <div className="hidden lg:block lg:absolute lg:top-[-59rem] lg:left-[10rem] sixth-circle lg:h-[106.563rem] lg:w-[106.563rem] lg:z-[-60]"></div>
       </div>
 
       <div className="mt-64 mx-auto w-full max-w-screen-2xl px-4 lg:px-[70px]">
