@@ -8,6 +8,7 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import '@/components/css/ProjectSection.css';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
+import { Check } from 'lucide-react';
 
 const ServiceSection = () => {
   const projectContainerRef = React.useRef<HTMLDivElement>(null);
@@ -31,6 +32,16 @@ const ServiceSection = () => {
   const getTextPosition = (name: string) => {
     if (name === 'contacto') {
       return '-mb-10';
+    }
+  };
+
+  const getCheckStyle = (name: string) => {
+    if (name === 'brand' || name === 'suscripción') {
+      return 'text-white';
+    } else if (name === 'webdev') {
+      return 'text-[#FFF45C]';
+    } else if (name === 'appdev') {
+      return 'text-[#7346F4]';
     }
   };
 
@@ -71,12 +82,13 @@ const ServiceSection = () => {
       >
         {services.map((service) => {
           const textPosition = getTextPosition(service.name);
+          const checkStyle = getCheckStyle(service.name);
           return (
             <div
               key={service.id}
               className="snap-start relative rounded-[25px] cursor-pointer"
             >
-              <div className="md:w-[420px] md:h-[585px] w-[350px] h-[530px]">
+              <div className="md:w-[420px] md:h-[585px] w-[350px] h-[585px]">
                 <Image
                   src={service.bgImg}
                   alt={service.alt}
@@ -85,7 +97,7 @@ const ServiceSection = () => {
                 />
               </div>
 
-              <div className="absolute bottom-8 w-full h-1/3 rounded-b-[50px] flex items-center justify-center">
+              <div className="absolute bottom-14 w-full h-1/3 rounded-b-[50px] flex flex-col">
                 <div className={cn('px-10 text-white', textPosition)}>
                   <div>
                     <h2 className="font-lufgaBold text-4xl tracking-tight">
@@ -94,16 +106,29 @@ const ServiceSection = () => {
                   </div>
                   <div>
                     <p className="font-sfpro">
-                      {service.name === 'contacto' ? '' : 'Empieza en'}
+                      {service.name === 'contacto' ? '' : 'Desde'}
                     </p>
-                    <p className="font-lufgaBold text-4xl tracking-tight">
+                    <p className="font-sfprobold text-4xl tracking-tight">
                       {service.cost}
                     </p>
                   </div>
-                  <div className="mt-3">
-                    <h2 className="text-base font-sfpro">
-                      {service.description}
-                    </h2>
+                  <div className="mt-3 flex flex-col space-y-1">
+                    <div className="flex flex-row space-x-2 items-center">
+                      <Check className={cn('h-4 w-4', checkStyle)} />
+                      <p className="font-sfpro">{service.firstCheck}</p>
+                    </div>
+                    <div className="flex flex-row space-x-2 items-center">
+                      <Check className={cn('h-4 w-4', checkStyle)} />
+                      <p className="font-sfpro">{service.secondCheck}</p>
+                    </div>
+                    <div className="flex flex-row space-x-2 items-center">
+                      <Check className={cn('h-4 w-4', checkStyle)} />
+                      <p className="font-sfpro">{service.thirdCheck}</p>
+                    </div>
+                    <div className="flex flex-row space-x-2 items-center">
+                      <Check className={cn('h-4 w-4', checkStyle)} />
+                      <p className="font-sfpro">{service.fourthCheck}</p>
+                    </div>
                   </div>
                 </div>
               </div>

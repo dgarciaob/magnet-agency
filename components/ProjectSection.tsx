@@ -127,11 +127,6 @@ const ProjectSection = () => {
           })}
         </div>
       </div>
-      {/* {isModalOpen && (
-        <div>
-          <Modal id={selectedId} onClose={handleModalClose} />
-        </div>
-      )} */}
     </motion.div>
   );
 };

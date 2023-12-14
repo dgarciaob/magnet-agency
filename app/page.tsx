@@ -24,7 +24,7 @@ export default function Home() {
       >
         {/* Logo, Hero & CTA */}
         <div className="animate-hero-slide-up order-last">
-          <Link href="/" className="hidden lg:block">
+          <Link href="/" className="hidden lg:block w-10 h-10 mb-8">
             <Image
               src="/logos/white-logo.svg"
               alt="magnet logo"

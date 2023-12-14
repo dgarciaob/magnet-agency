@@ -81,7 +81,7 @@ const Navbar = () => {
           />
         </Link>
         <Sheet>
-          <SheetTrigger className="">
+          <SheetTrigger>
             <Menu className="w-8 h-8" />
           </SheetTrigger>
           <SheetContent side="right" className="w-[250px] bg-[#F6F5FF]">
