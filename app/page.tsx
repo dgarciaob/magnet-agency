@@ -83,37 +83,40 @@ export default function Home() {
         <div className="hidden lg:block lg:absolute lg:top-[-59rem] lg:left-[10rem] sixth-circle lg:h-[106.563rem] lg:w-[106.563rem] lg:z-[-60]"></div>
       </div>
 
-      <div className="mt-64 mx-auto w-full max-w-screen-2xl px-4 lg:px-[70px]">
+      <div className="mt-64 mx-auto w-full max-w-screen-3xl px-4 lg:px-[70px]">
         <PartnersSection />
       </div>
 
       {/* Proyectos */}
       <div
-        className="mt-[100px] mb-44 mx-auto w-full max-w-screen-2xl px-4 lg:px-[70px]"
+        className="mt-[100px] mb-44 mx-auto w-full max-w-screen-3xl px-4 lg:px-[70px]"
         id="proyectos"
       >
         <ProjectSection />
       </div>
 
-      <div className="mt-40 mx-auto w-full max-w-screen-2xl px-4 lg:px-[70px]">
+      <div className="mt-40 mx-auto w-full max-w-screen-3xl px-4 lg:px-[70px]">
         <SocialProofSection />
       </div>
 
       {/* Servicios */}
       <div
-        className="mt-[90px] mb-44 mx-auto w-full max-w-screen-2xl px-4 lg:px-[70px]"
+        className="mt-[90px] mb-44 mx-auto w-full max-w-screen-3xl px-4 lg:px-[70px]"
         id="servicios"
       >
         <ServiceSection />
       </div>
 
       {/* Nosotros */}
-      <div className="mt-[200px] mb-44 w-full max-w-screen-2xl" id="nosotros">
+      <div
+        className="mt-[200px] mb-44 w-full max-w-screen-3xl 2xl:px-[70px]"
+        id="nosotros"
+      >
         <AboutUsSection />
       </div>
 
       <div
-        className="mt-[200px] mb-44 mx-auto w-full max-w-screen-2xl px-4 lg:px-[70px]"
+        className="mt-[200px] mb-44 mx-auto w-full max-w-screen-3xl px-4 lg:px-[70px]"
         id="contacto"
       >
         <ContactFormSection />
