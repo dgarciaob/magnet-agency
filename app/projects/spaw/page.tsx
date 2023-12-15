@@ -19,9 +19,10 @@ function Spaw() {
         <div className="font-lufgaBold text-4xl lg:text-6xl lg:w-1/3 lg:space-y-10 space-y-4 relative">
           <h1>spatial (-.-) awareness</h1>
           <p className="font-sfpro text-lg lg:text-2xl">
-            SPAW is a brand that encompasses several fields, hence the need to
-            have an everchanging but recognizable logo. A brand that thrives on
-            the reminiscence of simpler times.
+            SPAW es una marca que encapsula muchos campos que involucran
+            creatividad. Debido a ello, existía la necesidad de crear un logo
+            que este en constante cambio pero continue memorable. Es una marca
+            que enaltece tiempos más simples.
           </p>
           <div className="absolute top-[-8rem] bg-[#668BFC] rounded-full h-[10rem] w-[10rem] blur-[6rem]"></div>
         </div>
