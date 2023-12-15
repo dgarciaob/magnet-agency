@@ -108,9 +108,7 @@ const ServiceSection = () => {
                     <p className="font-sfpro">
                       {service.name === 'contacto' ? '' : 'Desde'}
                     </p>
-                    <p className="font-sfprobold text-4xl tracking-tight">
-                      {service.cost}
-                    </p>
+                    <p className="font-sfprobold text-4xl">{service.cost}</p>
                   </div>
                   <div className="mt-3 flex flex-col space-y-1">
                     <div className="flex flex-row space-x-2 items-center">
