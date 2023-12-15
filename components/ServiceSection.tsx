@@ -97,7 +97,7 @@ const ServiceSection = () => {
                 />
               </div>
 
-              <div className="absolute bottom-14 w-full h-1/3 rounded-b-[50px] flex flex-col">
+              <div className="absolute bottom-16 w-full h-1/3 rounded-b-[50px] flex flex-col">
                 <div className={cn('px-10 text-white', textPosition)}>
                   <div>
                     <h2 className="font-lufgaBold text-4xl tracking-tight">
