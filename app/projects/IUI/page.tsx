@@ -1,10 +1,20 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowLeft } from 'lucide-react';
 
 function IUI() {
   return (
     <main className="px-4 lg:px-[70px] py-32 lg:py-[100px]">
+      <div className="mb-10 z-50 relative" style={{ zIndex: 1 }}>
+        <Link href="/" legacyBehavior>
+          <a className="text-blue-600 hover:underline font-sfprobold text-lg">
+            <ArrowLeft className="inline mr-2 h-5 w-5 text-blue-600 hover:underline" />
+            Regresar
+          </a>
+        </Link>
+      </div>
       <div className="flex flex-col space-y-8 lg:flex lg:flex-row lg:items-center">
         <div className="font-lufgaBold text-4xl lg:text-6xl lg:w-1/3 lg:space-y-10 space-y-4 relative">
           <h1>Interpreters UI</h1>
@@ -17,29 +27,15 @@ function IUI() {
         </div>
         <div className="lg:w-2/3 flex items-center justify-center">
           <Image
-            src="/images/macbookIUI.png"
-            alt="Giko pic"
+            src="/images/mockup-IUI.png"
+            alt="IUI pic"
             width={800}
             height={600}
             placeholder="blur"
-            blurDataURL="/images/macbookIUI.png"
+            blurDataURL="/images/mockup-IUI.png"
           />
         </div>
       </div>
-
-      {/* <div className="mt-10 lg:mt-20 rounded-xl">
-    <div>
-      <Image
-        src="/images/gikoProjectImages.png"
-        alt="Giko pic"
-        width={1000}
-        height={600}
-        placeholder="blur"
-        blurDataURL="/images/gikoProjectImages.png"
-        className="rounded-xl"
-      />
-    </div>
-  </div> */}
     </main>
   );
 }
