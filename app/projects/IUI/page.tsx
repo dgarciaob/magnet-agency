@@ -8,7 +8,7 @@ function IUI() {
   return (
     <main className="px-4 lg:px-[70px] py-32 lg:py-[100px]">
       <div className="mb-10 z-50 relative" style={{ zIndex: 1 }}>
-        <Link href="/" legacyBehavior>
+        <Link href="/#proyectos" legacyBehavior>
           <a className="text-blue-600 hover:underline font-sfprobold text-lg">
             <ArrowLeft className="inline mr-2 h-5 w-5 text-blue-600 hover:underline" />
             Regresar
