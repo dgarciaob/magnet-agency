@@ -88,7 +88,10 @@ export default function Home() {
       </div>
 
       {/* Proyectos */}
-      <div className="mt-[100px] mb-44" id="proyectos">
+      <div
+        className="mt-[100px] mb-44 mx-auto w-full max-w-screen-2xl px-4 lg:px-[70px]"
+        id="proyectos"
+      >
         <ProjectSection />
       </div>
 

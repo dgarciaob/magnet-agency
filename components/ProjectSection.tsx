@@ -13,11 +13,12 @@ import { useRouter } from 'next/navigation';
 const ProjectSection = () => {
   const ref = React.useRef<HTMLDivElement>(null);
   const projectContainerRef = React.useRef<HTMLDivElement>(null);
+  const scrollMeasure = 530;
 
   const handleNext = () => {
     if (projectContainerRef.current) {
       projectContainerRef.current.scrollTo({
-        left: projectContainerRef.current.scrollLeft + 530,
+        left: projectContainerRef.current.scrollLeft + scrollMeasure,
         behavior: 'smooth',
       });
     }
@@ -25,7 +26,7 @@ const ProjectSection = () => {
   const handlePrev = () => {
     if (projectContainerRef.current) {
       projectContainerRef.current.scrollTo({
-        left: projectContainerRef.current.scrollLeft - 530,
+        left: projectContainerRef.current.scrollLeft - scrollMeasure,
         behavior: 'smooth',
       });
     }
@@ -51,7 +52,7 @@ const ProjectSection = () => {
       transition={{ duration: 1.3 }}
       viewport={{ once: true }}
     >
-      <div className="flex flex-row justify-between items-center align-middle md:mb-4 mb-8 mt-24 mx-auto w-full max-w-screen-2xl px-4 lg:px-[70px]">
+      <div className="flex flex-row justify-between items-center align-middle md:mb-4 mb-8 mt-24">
         <RouteTitle
           title="Proyectos"
           description="Nuestras más recientes historias"
@@ -78,7 +79,7 @@ const ProjectSection = () => {
       <div>
         <div
           ref={projectContainerRef}
-          className="md:flex md:flex-row md:space-x-8 md:snap-x md:snap-mandatory md:space-y-0 flex flex-col space-y-6 scrollbar-hide overflow-y-hidden px-4 lg:px-[70px]"
+          className="md:flex md:flex-row md:space-x-8 md:snap-x md:snap-mandatory md:space-y-0 flex flex-col space-y-6 scrollbar-hide overflow-y-hidden active:cursor-grabbing"
         >
           {projects.map((project) => {
             const textClass = getTextClass(project.alt);
@@ -86,7 +87,7 @@ const ProjectSection = () => {
             return (
               <div
                 key={project.id}
-                className="snap-center relative rounded-[50px] cursor-pointer"
+                className="snap-start relative rounded-[50px] cursor-pointer active:cursor-grabbing"
                 onClick={() => handleProjectClick(project.pathToPage)}
               >
                 <div className="md:w-[530px] md:h-[585px] w-[350px] h-[440px]">

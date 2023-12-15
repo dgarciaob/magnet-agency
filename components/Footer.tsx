@@ -89,10 +89,10 @@ function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="mailto:magnetperu@gmail.com?subject=Contacto Magnet Perú"
+                      href="mailto:hola@magnetperu.com?subject=Contacto Magnet Perú"
                       className="hover:underline whitespace-nowrap"
                     >
-                      magnetperu@gmail.com
+                      hola@magnetperu.com
                     </Link>
                   </li>
                 </ul>

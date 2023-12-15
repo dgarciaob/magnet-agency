@@ -8,7 +8,7 @@ export const team = [
   },
   {
     name: 'Bruno Gardini',
-    image: '/images/profilePicBG.png',
+    image: '/images/380.png',
     alt: 'Bruno Gardini',
     phrase: 'design headspace',
     role: 'CDO | Co-Founder',
@@ -22,7 +22,7 @@ export const team = [
   },
   {
     name: 'Guille Zumarán',
-    image: '/images/profilePicBG.png',
+    image: '/images/zumijpg.png',
     alt: 'Guille Zumarán',
     phrase: '3js connoisseur',
     role: 'CPO',

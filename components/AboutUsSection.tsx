@@ -112,7 +112,7 @@ const AboutUsSection = () => {
           return (
             <div
               key={founder.name}
-              className="relative overflow-x-hidden w-[310px] h-full"
+              className="relative overflow-x-hidden overflow-y-clip w-[310px] h-[410px] bg-white rounded-[25px]"
             >
               <Image
                 src={founder.image}
