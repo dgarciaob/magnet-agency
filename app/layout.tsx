@@ -15,7 +15,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const fullImageUrl = `https://magnetperu.com/logos/logomagnet.png`;
+  const fullImageUrl = `https://magnetperu.com/images/preview.png`;
   return (
     <html lang="en" className="h-full">
       <Head>
