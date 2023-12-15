@@ -19,14 +19,35 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <Head>
-        <meta property="og:image" content={fullImageUrl} />
+        <title>Magnet</title>
         <meta
-          property="og:title"
-          content={String(metadata.title) || 'Magnet'}
+          name="description"
+          content="Agencia de Diseño y Desarrollo Web."
         />
+
+        <meta property="og:url" content="https://magnetperu.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Magnet" />
         <meta
           property="og:description"
-          content={metadata.description || 'Agencia de Diseño y Desarrollo Web'}
+          content="Agencia de Diseño y Desarrollo Web."
+        />
+        <meta
+          property="og:image"
+          content="https://magnetperu.com/images/preview.png"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="magnetperu.com" />
+        <meta property="twitter:url" content="https://magnetperu.com" />
+        <meta name="twitter:title" content="Magnet" />
+        <meta
+          name="twitter:description"
+          content="Agencia de Diseño y Desarrollo Web."
+        />
+        <meta
+          name="twitter:image"
+          content="https://magnetperu.com/images/preview.png"
         />
       </Head>
       <body
