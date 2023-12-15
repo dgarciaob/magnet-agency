@@ -55,7 +55,7 @@ const AboutUsSection = () => {
           onMouseLeave={handleMouseLeave}
         >
           <Image
-            src="/images/diego.png"
+            src="/images/4xprimo.png"
             alt="Diego Garcia"
             fill
             className="object-contain"
@@ -67,7 +67,7 @@ const AboutUsSection = () => {
           onMouseLeave={handleMouseLeave}
         >
           <Image
-            src="/images/bj.png"
+            src="/images/4xbru.png"
             alt="Bruno Jacobs"
             fill
             className="object-contain"
@@ -79,7 +79,7 @@ const AboutUsSection = () => {
           onMouseLeave={handleMouseLeave}
         >
           <Image
-            src="/images/zere.png"
+            src="/images/4xyo.png"
             alt="Bruno Gardini"
             fill
             className="object-contain"
@@ -91,7 +91,7 @@ const AboutUsSection = () => {
           onMouseLeave={handleMouseLeave}
         >
           <Image
-            src="/images/zumi.png"
+            src="/images/4xzumi.png"
             alt="Guille Zumarán"
             fill
             className="object-contain"

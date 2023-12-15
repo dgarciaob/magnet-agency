@@ -15,7 +15,7 @@ export const team = [
   },
   {
     name: 'Bruno Jacobs',
-    image: '/images/profilePicBJ.png',
+    image: '/images/profilePicBJ2.jpeg',
     alt: 'Bruno Jacobs',
     phrase: 'moneymaking machine',
     role: 'CTO',
