@@ -18,13 +18,13 @@ export const team = [
     image: '/images/profilePicBJ2.jpeg',
     alt: 'Bruno Jacobs',
     phrase: 'moneymaking machine',
-    role: 'CTO',
+    role: 'Senior Dev',
   },
   {
     name: 'Guille Zumarán',
     image: '/images/zumijpg.png',
     alt: 'Guille Zumarán',
     phrase: '3js connoisseur',
-    role: 'CPO',
+    role: 'Senior Dev',
   },
 ];

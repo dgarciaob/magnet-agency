@@ -65,11 +65,13 @@ export default function PartnersSection() {
   return (
     <section>
       <PartnersSectionFunct baseVelocity={-5}>
-        <p className="text-[#7346F4] font-lufgaBold ml-8">Somos Magnet</p>
+        <p className="text-[#7346F4] font-lufgaBold ml-8">
+          Diseño · Desarrollo · Branding · Audiovisual
+        </p>
       </PartnersSectionFunct>
-      <PartnersSectionFunct baseVelocity={5}>
+      {/* <PartnersSectionFunct baseVelocity={5}>
         <p className="text-[#7346F4] font-lufgaBold ml-8">Somos Magnet</p>
-      </PartnersSectionFunct>
+      </PartnersSectionFunct> */}
     </section>
   );
 }

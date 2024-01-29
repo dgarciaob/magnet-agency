@@ -21,6 +21,7 @@ const AboutUsSection = () => {
     setIsHovered(true);
     setCurrentFounder(founderName);
   };
+
   const handleMouseLeave = () => {
     setIsHovered(false);
     setCurrentFounder('');
@@ -107,7 +108,7 @@ const AboutUsSection = () => {
         )}
       </div>
 
-      <div className="md:flex md:flex-row md:space-y-0 justify-between flex flex-col items-center space-y-6 mt-20 mx-auto w-full max-w-screen-2xl px-4 lg:px-[70px]">
+      {/* <div className="md:flex md:flex-row md:space-y-0 justify-between flex flex-col items-center space-y-6 mt-20 mx-auto w-full max-w-screen-2xl px-4 lg:px-[70px]">
         {team.map((founder) => {
           return (
             <div
@@ -141,6 +142,85 @@ const AboutUsSection = () => {
             </div>
           );
         })}
+      </div> */}
+
+      <div className="mt-20 mx-auto w-full max-w-screen-2xl px-4 lg:px-[70px] flex flex-col space-y-6 items-center md:flex-row md:space-y-0 md:flex-wrap md:gap-6 md:justify-center md:items-center">
+        <div className="relative rounded-[25px]">
+          <Image
+            src="/images/profilePicDiego.png"
+            alt="Diego García"
+            width={310}
+            height={310}
+            className="object-cover rounded-[25px] w-[310px] h-[350px]"
+          />
+          <div className="absolute bottom-0 w-full h-[15%] backdrop-blur-md rounded-b-[25px] px-4 pt-4">
+            <div className="flex flex-row items-center space-x-2">
+              <h2 className="text-base font-sfprobold text-white">
+                Diego Garcia
+              </h2>
+              <span className="text-white">·</span>
+              <p className="text-base font-sfpro text-white">
+                Co-founder & Dev
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="relative rounded-[25px]">
+          <Image
+            src="/images/380.png"
+            alt="Bruno Gardini"
+            width={310}
+            height={310}
+            className="object-cover rounded-[25px] w-[310px] h-[350px]"
+          />
+          <div className="absolute bottom-0 w-full h-[15%] backdrop-blur-md rounded-b-[25px] px-2 pt-4">
+            <div className="flex flex-row items-center space-x-2">
+              <h2 className="text-base font-sfprobold text-white">
+                Bruno Gardini
+              </h2>
+              <span className="text-white">·</span>
+              <p className="text-base font-sfpro text-white">
+                Co-founder & Design
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="relative rounded-[25px]">
+          <Image
+            src="/images/profilePicBJ2.jpeg"
+            alt="Bruno Jacobs"
+            width={310}
+            height={310}
+            className="object-cover rounded-[25px] w-[310px] h-[350px]"
+          />
+          <div className="absolute bottom-0 w-full h-[15%] backdrop-blur-md rounded-b-[25px] px-4 pt-4">
+            <div className="flex flex-row items-center space-x-2">
+              <h2 className="text-base font-sfprobold text-white">
+                Bruno Jacobs
+              </h2>
+              <span className="text-white">·</span>
+              <p className="text-base font-sfpro text-white">Senior Dev</p>
+            </div>
+          </div>
+        </div>
+        <div className="relative rounded-[25px]">
+          <Image
+            src="/images/zumijpg.png"
+            alt="Guille Zumarán"
+            width={310}
+            height={310}
+            className="object-cover rounded-[25px] w-[310px] h-[350px]"
+          />
+          <div className="absolute bottom-0 w-full h-[15%] backdrop-blur-md rounded-b-[25px] px-4 pt-4">
+            <div className="flex flex-row items-center space-x-2">
+              <h2 className="text-base font-sfprobold text-white">
+                Guillermo Zumarán
+              </h2>
+              <span className="text-white">·</span>
+              <p className="text-base font-sfpro text-white">Senior Dev</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
