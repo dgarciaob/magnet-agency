@@ -66,7 +66,7 @@ export default function PartnersSection() {
     <section>
       <PartnersSectionFunct baseVelocity={-5}>
         <p className="text-[#7346F4] font-lufgaBold ml-8">
-          Diseño · Desarrollo · Branding · Audiovisual
+          Diseño · Desarrollo · Branding · Audiovisual ·
         </p>
       </PartnersSectionFunct>
       {/* <PartnersSectionFunct baseVelocity={5}>
