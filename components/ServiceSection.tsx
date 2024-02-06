@@ -104,12 +104,12 @@ const ServiceSection = () => {
                       {service.name}
                     </h2>
                   </div>
-                  <div>
+                  {/* <div>
                     <p className="font-sfpro">
                       {service.name === 'contacto' ? '' : 'Desde'}
                     </p>
                     <p className="font-sfprobold text-4xl">{service.cost}</p>
-                  </div>
+                  </div> */}
                   <div className="mt-3 flex flex-col space-y-1">
                     <div className="flex flex-row space-x-2 items-center">
                       <Check className={cn('h-4 w-4', checkStyle)} />
