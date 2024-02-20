@@ -1,14 +1,14 @@
 export const projects = [
   {
     id: 3,
-    name: 'kuk (kuuuuuukk)',
+    name: 'Kuk, a cooking app.',
     bgImg: '/images/kuk.png',
     alt: 'Kuk Logo',
     logoImg: '/logos/logokuk.png',
     descripcion:
-      'La diversión de ver las fotos del recetario de mamá son traídas a la era digital con Kuk. Tu compañero de cocina a un tap de distancia.',
+      "The joy of flipping through mom's recipe book is brought into the digital age with Kuk. Your kitchen companion just a tap away.",
     descripcionModal:
-      'Kuk, app para principiantes en la cocina casera. Proporciona un diario personalizable de comidas para manejar tiempo y dinero.',
+      'Kuk, an app for beginners in homemade cooking. Provides a customizable meal diary to manage time and money.',
     serviceType: 'UX/UI',
     linkToWeb: 'https://www.behance.net/gallery/164030461/Kuk-a-cooking-app',
     modalImgOne: '/images/kuk1.png',
@@ -25,7 +25,7 @@ export const projects = [
     alt: 'IUI Logo',
     logoImg: '/images/IUILogo.png',
     descripcion:
-      'Diseño UX/UI en la industria de Interpreters. Diseño de interfaz y experiencia de usuario para dashboard de interpretadores.',
+      'UX/UI Design for the interpreters industry. Interface and user experience design for interpreters dashboard.',
     descripcionModal:
       'Dashboards for over-the-phone interpretation. Renovation of the user interface for the interpreters dashboard.',
     serviceType: 'UX/UI',
@@ -40,12 +40,12 @@ export const projects = [
   },
   {
     id: 5,
-    name: 'giko [+]',
+    name: 'Giko [+]',
     bgImg: '/images/GIKO.png',
     alt: 'Giko Logo',
     logoImg: '/logos/logogiko.png',
     descripcion:
-      'Los artesanos apasionados de los periféricos llegan a tu escritorio a cumplir con la vision de tu espacio ideal. Apunta al placer de escribir con giko.',
+      'Giko is a peripherals retailer specialized in mechanical keyboards. Less is definitely more.',
     descripcionModal:
       'Completo diseño de marca para Giko [+]. Desarrollo de identidad y posicionamiento de marca dentro del rubro de teclados mecánicos.',
     serviceType: 'Brand',
@@ -59,12 +59,12 @@ export const projects = [
   },
   {
     id: 4,
-    name: 'zerendor.com',
+    name: 'Zerendor.com',
     bgImg: '/images/zerendorpuntocom.png',
     alt: 'Zerendor Logo',
     logoImg: '/logos/logozere.png',
     descripcion:
-      'El diseño es la solución. zerendor.com. La pasión es la clave. zerendor.com. La disciplina es el éxito. zerendor.com',
+      'Design is the solution. zerendor.com. Passion is key. zerendor.com. Discipline is success. zerendor.com.',
     descripcionModal:
       'El diseño es la solución. zerendor.com. La pasión es la clave. zerendor.com. La disciplina es el éxito. zerendor.com. Webdev for zerendor.com.',
     serviceType: 'Webdev',
@@ -78,12 +78,12 @@ export const projects = [
   },
   {
     id: 2,
-    name: 'spatial (-.-) awareness',
+    name: 'Spatial Awareness',
     bgImg: '/images/spaw.png',
     alt: 'Spaw Logo',
     logoImg: '/logos/logospaw.png',
     descripcion:
-      'Somos una cápsula de emociones, una vanguardia creativa que encuentra sus raíces en tiempos más simples. Descubre el mensaje de SPAW aquí.',
+      'A brand that thrives on the reminiscence of simpler times, established in an obsessed passion for well designed things.',
     descripcionModal:
       'SPAW is a brand that encompasses several fields, hence the need to have an everchanging but recognizable logo. A brand that thrives on the reminiscence of simpler times.',
     serviceType: 'Brand',
@@ -95,23 +95,23 @@ export const projects = [
     modalImgFive: '/images/spaw5.png',
     pathToPage: '/spaw',
   },
-  {
-    id: 1,
-    name: '(magnet)',
-    bgImg: '/images/magnetbg.png',
-    alt: 'Magnet Logo',
-    logoImg: '/logos/logomagnet.png',
-    descripcion:
-      'Un nuevo comienzo. Acompáñanos a ser líderes globales en transformación de emprendedores. Conoce más sobre magnet y su universo creativo aquí.',
-    descripcionModal:
-      'El mejor ejemplo de nuestro estándar de trabajo y de la calidad que obtendrás. Diseño y Desarrollo completo de marca.',
-    serviceType: 'Brand - Webdev',
-    linkToWeb: '/',
-    modalImgOne: '/images/magnet1.png',
-    modalImgTwo: '/images/magnetBg.png',
-    modalImgThree: '/images/magnet3.png',
-    modalImgFour: '/logos/white-logo.svg',
-    modalImgFive: '/images/magnet5.png',
-    pathToPage: '/magnet',
-  },
+  // {
+  //   id: 1,
+  //   name: '(magnet)',
+  //   bgImg: '/images/magnetbg.png',
+  //   alt: 'Magnet Logo',
+  //   logoImg: '/logos/logomagnet.png',
+  //   descripcion:
+  //     'Un nuevo comienzo. Acompáñanos a ser líderes globales en transformación de emprendedores. Conoce más sobre magnet y su universo creativo aquí.',
+  //   descripcionModal:
+  //     'El mejor ejemplo de nuestro estándar de trabajo y de la calidad que obtendrás. Diseño y Desarrollo completo de marca.',
+  //   serviceType: 'Brand - Webdev',
+  //   linkToWeb: '/',
+  //   modalImgOne: '/images/magnet1.png',
+  //   modalImgTwo: '/images/magnetBg.png',
+  //   modalImgThree: '/images/magnet3.png',
+  //   modalImgFour: '/logos/white-logo.svg',
+  //   modalImgFive: '/images/magnet5.png',
+  //   pathToPage: '/magnet',
+  // },
 ];

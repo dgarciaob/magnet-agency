@@ -53,10 +53,7 @@ const ServiceSection = () => {
       viewport={{ once: true }}
     >
       <div className="flex flex-row justify-between items-center align-middle mb-4 mt-24">
-        <RouteTitle
-          title="Servicios"
-          description="Planes acorde a lo que buscas"
-        />
+        <RouteTitle title="Services" description="Plans to fit your needs" />
         <div className="sm:flex justify-end mt-32 hidden">
           <div className="h-[56px] w-[120px] rounded-full bg-white flex items-center justify-between align-middle px-4">
             <button

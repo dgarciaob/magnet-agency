@@ -53,10 +53,7 @@ const ProjectSection = () => {
       viewport={{ once: true }}
     >
       <div className="flex flex-row justify-between items-center align-middle md:mb-4 mb-8 mt-24">
-        <RouteTitle
-          title="Proyectos"
-          description="Nuestras más recientes historias"
-        />
+        <RouteTitle title="Work" description="Our most recent projects" />
         <div className="sm:flex justify-end mt-32 hidden">
           <div className="h-[56px] w-[120px] rounded-full bg-white flex items-center justify-between align-middle px-4">
             <button

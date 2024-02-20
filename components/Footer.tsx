@@ -17,7 +17,7 @@ function Footer() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.8 }}
             >
-              <Link href="#inicio" className="flex items-center scroll-smooth">
+              <Link href="#init" className="flex items-center scroll-smooth">
                 <Image
                   src="/logos/white-logo.svg"
                   className="mr-3"
@@ -33,48 +33,48 @@ function Footer() {
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 font-sfpro">
               <div>
                 <h2 className="mb-6 text-sm font-sfprobold text-[#F6F5FF] uppercase dark:text-white">
-                  Nosotros
+                  About Us
                 </h2>
                 <ul className="text-[#F6F5FF]/80 dark:text-gray-400">
                   <li className="mb-4">
                     <Link
-                      href="#nosotros"
+                      href="#aboutus"
                       scroll
                       className="hover:underline scroll-smooth"
                     >
-                      Quiénes Somos
+                      Who we are
                     </Link>
                   </li>
                   <li className="mb-4">
                     <Link
-                      href="#proyectos"
+                      href="#work"
                       scroll
                       className="hover:underline scroll-smooth"
                     >
-                      Portafolio
+                      Work
                     </Link>
                   </li>
                 </ul>
               </div>
               <div>
                 <h2 className="mb-6 text-sm font-sfprobold text-[#F6F5FF] uppercase dark:text-white">
-                  Servicios
+                  Services
                 </h2>
                 <ul className="text-[#F6F5FF]/80 dark:text-gray-400">
                   <li className="mb-4">
                     <Link
-                      href="#servicios"
+                      href="#services"
                       scroll
                       className="hover:underline scroll-smooth"
                     >
-                      Nuestros Servicios
+                      Our Services
                     </Link>
                   </li>
                 </ul>
               </div>
               <div>
                 <h2 className="mb-6 text-sm font-sfprobold text-[#F6F5FF] uppercase">
-                  Contacto
+                  Contact
                 </h2>
                 <ul className="text-[#F6F5FF]/80 dark:text-gray-400">
                   <li className="mb-4">
@@ -89,7 +89,7 @@ function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="mailto:hola@magnetperu.com?subject=Contacto Magnet Perú"
+                      href="mailto:hola@magnetperu.com?subject=Magnet Contact"
                       className="hover:underline whitespace-nowrap"
                     >
                       hola@magnetperu.com
@@ -106,7 +106,7 @@ function Footer() {
               <Link href="/" className="hover:underline">
                 Magnet™
               </Link>
-              . Todos los derechos Reservados.
+              . All rights reserved.
             </span>
             <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
               <Link

@@ -31,8 +31,8 @@ const AboutUsSection = () => {
     <div>
       <div className="flex flex-row justify-between items-center align-middle mb-4 mt-24 px-4 lg:px-[70px]">
         <RouteTitle
-          title="Equipo"
-          description="Las personas que forman magnet"
+          title="Team"
+          description="The team that makes it all happen"
         />
       </div>
       <div className="relative w-full h-screen flex items-center justify-center">

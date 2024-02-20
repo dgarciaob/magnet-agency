@@ -6,8 +6,8 @@ import Footer from '@/components/Footer';
 import Head from 'next/head';
 
 export const metadata: Metadata = {
-  title: 'Magnet',
-  description: 'Agencia de Diseño y Desarrollo Web.',
+  title: 'Magnet | Digital Solutions for Startups',
+  description: 'Crafting standout digital solutions to fuel startup success.',
 };
 
 export default function RootLayout({
@@ -22,7 +22,7 @@ export default function RootLayout({
         <title>Magnet</title>
         <meta
           name="description"
-          content="Agencia de Diseño y Desarrollo Web."
+          content="Crafting standout digital solutions to fuel startup success."
         />
 
         <meta property="og:url" content="https://magnetperu.com" />
@@ -30,7 +30,7 @@ export default function RootLayout({
         <meta property="og:title" content="Magnet" />
         <meta
           property="og:description"
-          content="Agencia de Diseño y Desarrollo Web."
+          content="Crafting standout digital solutions to fuel startup success."
         />
         <meta
           property="og:image"
@@ -43,7 +43,7 @@ export default function RootLayout({
         <meta name="twitter:title" content="Magnet" />
         <meta
           name="twitter:description"
-          content="Agencia de Diseño y Desarrollo Web."
+          content="Crafting standout digital solutions to fuel startup success."
         />
         <meta
           name="twitter:image"

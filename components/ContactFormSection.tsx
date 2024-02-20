@@ -28,16 +28,16 @@ import type { Database } from '../database.types';
 const contactFormSchema = z.object({
   nombre: z
     .string()
-    .min(3, { message: 'Tu nombre debe tener al menos 3 caracteres' }),
+    .min(3, { message: 'Your name must be at least 3 characters long' }),
   celular: z
     .string()
-    .min(9, { message: 'Ingresa un número válido' })
-    .max(9, { message: 'Ingresa un número válido' }),
-  email: z.string().email({ message: 'Ingresa un correo válido' }),
+    .min(9, { message: 'Enter a valid phone number' })
+    .max(9, { message: 'Enter a valid phone number' }),
+  email: z.string().email({ message: 'Enter a valid email address' }),
   mensaje: z
     .string()
-    .min(10, { message: 'Tu mensaje debe tener al menos 10 caracteres' })
-    .max(200, { message: 'Tu mensaje debe tener máximo de 200 caracteres' }),
+    .min(10, { message: 'Your message must be at least 10 characters long' })
+    .max(200, { message: 'Your message must be a maximum of 200 characters' }),
 });
 
 const ContactFormSection = () => {
@@ -86,11 +86,12 @@ const ContactFormSection = () => {
       <div className="md:p-8 p-1 rounded-xl w-full h-full md:flex md:flex-row md:items-stretch md:space-y-0 justify-between flex flex-col items-center space-y-10">
         <div className="bg-[#1F1F1F] rounded-lg md:w-1/3 p-8 shadow-lg">
           <h2 className="md:text-4xl text-3xl font-sfprobold font-bold text-white">
-            ¿Alguna consulta? <br />
-            Ayudamos a cumplir tu{' '}
+            ¿Questions? <br />
+            We help you accomplish your
+            <br />{' '}
             <span className="text-[#FFFCD6]">
               <TypeAnimation
-                sequence={['sueño', 2000, 'meta', 2000, 'visión', 2000]}
+                sequence={['dream', 2000, 'goal', 2000, 'vision', 2000]}
                 wrapper="span"
                 speed={50}
                 repeat={Infinity}
@@ -98,7 +99,7 @@ const ContactFormSection = () => {
             </span>
           </h2>
           <p className="text-xl font-sfpro text-slate-300 mt-4">
-            ¡Déjanos un mensaje!
+            ¡Say something nice!
           </p>
         </div>
         <div className="md:w-2/3 flex justify-center items-center w-full font-sfpro">
@@ -114,11 +115,9 @@ const ContactFormSection = () => {
                   render={({ field }) => {
                     return (
                       <FormItem>
-                        <FormLabel className="text-[#1F1F1F]">
-                          Nombre Completo
-                        </FormLabel>
+                        <FormLabel className="text-[#1F1F1F]">Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="Escribe tu nombre" {...field} />
+                          <Input placeholder="Type your name" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -131,11 +130,9 @@ const ContactFormSection = () => {
                   render={({ field }) => {
                     return (
                       <FormItem>
-                        <FormLabel className="text-[#1F1F1F]">
-                          Teléfono
-                        </FormLabel>
+                        <FormLabel className="text-[#1F1F1F]">Phone</FormLabel>
                         <FormControl>
-                          <Input placeholder="Escribe tu celular" {...field} />
+                          <Input placeholder="Type your phone" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -148,9 +145,9 @@ const ContactFormSection = () => {
                   render={({ field }) => {
                     return (
                       <FormItem>
-                        <FormLabel className="text-[#1F1F1F]">Correo</FormLabel>
+                        <FormLabel className="text-[#1F1F1F]">Email</FormLabel>
                         <FormControl>
-                          <Input placeholder="Escribe tu correo" {...field} />
+                          <Input placeholder="Type your email" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -164,11 +161,11 @@ const ContactFormSection = () => {
                     return (
                       <FormItem>
                         <FormLabel className="text-[#1F1F1F]">
-                          Mensaje
+                          Message
                         </FormLabel>
                         <FormControl>
                           <Textarea
-                            placeholder="Escribe cómo podemos ayudarte"
+                            placeholder="Lets start a conversation!"
                             className="resize-none"
                             {...field}
                           />
@@ -212,14 +209,14 @@ const ContactFormSection = () => {
                       animate={{ opacity: 1 }}
                       transition={{ duration: 1 }}
                     >
-                      Enviar
+                      Send
                     </motion.div>
                   )}
                 </Button>
                 {isError && (
                   <p className="text-red-500 text-sm">
-                    Hubo un error al enviar tu mensaje, por favor intenta de
-                    nuevo.
+                    There was an error trying to send your message, please try
+                    again.
                   </p>
                 )}
               </form>

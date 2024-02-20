@@ -20,7 +20,7 @@ export default function Home() {
     <main>
       <div
         className="md:grid md:grid-cols-2 flex flex-col items-center md:pt-36 pt-16 md:h-screen w-full mx-auto max-w-screen-2xl lg:px-[70px] relative"
-        id="inicio"
+        id="init"
       >
         {/* Logo, Hero & CTA */}
         <div className="animate-hero-slide-up order-last">
@@ -34,30 +34,30 @@ export default function Home() {
             />
           </Link>
           <h1 className="font-lufgaBold sm:text-7xl text-5xl sm:text-left text-center select-none hero-title-gradient">
-            El partner digital <br />
-            de tu siguiente <br />
-            <span className="hero-text-gradient">gran idea</span>
+            Crafting digital <br />
+            solutions <br />
+            <span className="hero-text-gradient">for success.</span>
           </h1>
           <p className="font-sfpro mb-16 mt-8 text-center lg:text-left max-w-md lg:max-w-[430px]">
-            Magnet es un grupo de emprendedores innatos, desarrolladores y
-            diseñadores. Nos dedicamos a empoderar a emprendedores como tú.
+            We support and enable entrepreneurs to transform their vision into
+            action.
           </p>
           <div className="md:space-x-5 space-y-5 flex flex-col md:block sm:px-0 px-8">
-            <Link href="#contacto" scroll className="scroll-smooth">
+            <Link href="#contact" scroll className="scroll-smooth">
               <Button
                 variant="default"
                 className="font-sfpro h-[56px] md:w-[200px] w-full text-xl shadow-lg heroButton"
               >
-                Agendar cita
+                Contact Us
               </Button>
             </Link>
 
-            <Link href="#proyectos" className="scroll-smooth">
+            <Link href="#work" className="scroll-smooth">
               <Button
                 variant="secondary"
                 className="font-sfpro h-[56px] md:w-[200px] w-full text-xl shadow-sm"
               >
-                Descubre <ArrowDown className="ml-3" />
+                Learn More <ArrowDown className="ml-3" />
               </Button>
             </Link>
           </div>
@@ -90,7 +90,7 @@ export default function Home() {
       {/* Proyectos */}
       <div
         className="mt-[100px] mb-44 mx-auto w-full max-w-screen-3xl px-4 lg:px-[70px]"
-        id="proyectos"
+        id="work"
       >
         <ProjectSection />
       </div>
@@ -102,7 +102,7 @@ export default function Home() {
       {/* Servicios */}
       <div
         className="mt-[90px] mb-44 mx-auto w-full max-w-screen-3xl px-4 lg:px-[70px]"
-        id="servicios"
+        id="services"
       >
         <ServiceSection />
       </div>
@@ -110,14 +110,14 @@ export default function Home() {
       {/* Nosotros */}
       <div
         className="mt-[200px] mb-44 w-full max-w-screen-3xl 2xl:px-[70px]"
-        id="nosotros"
+        id="aboutus"
       >
         <AboutUsSection />
       </div>
 
       <div
         className="mt-[200px] mb-44 mx-auto w-full max-w-screen-3xl px-4 lg:px-[70px]"
-        id="contacto"
+        id="contact"
       >
         <ContactFormSection />
       </div>
