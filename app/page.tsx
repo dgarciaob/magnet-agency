@@ -19,12 +19,12 @@ export default function Home() {
   return (
     <main>
       <div
-        className="md:grid md:grid-cols-2 flex flex-col items-center md:pt-36 pt-16 md:h-screen w-full mx-auto max-w-screen-2xl lg:px-[70px] relative"
+        className="md:grid md:grid-cols-2 flex flex-col items-center md:pt-36 pt-16 md:h-screen w-full mx-auto max-w-screen-2xl px-4 lg:px-[70px] relative"
         id="init"
       >
         {/* Logo, Hero & CTA */}
         <div className="animate-hero-slide-up order-last">
-          <Link href="/" className="hidden lg:block w-10 h-10 mb-8">
+          <Link href="/" className="hidden md:block w-10 h-10 mb-8">
             <Image
               src="/logos/white-logo.svg"
               alt="magnet logo"
@@ -38,12 +38,18 @@ export default function Home() {
             solutions <br />
             <span className="hero-text-gradient">for success.</span>
           </h1>
-          <p className="font-sfpro mb-16 mt-8 text-center lg:text-left max-w-md lg:max-w-[430px]">
-            We support and enable entrepreneurs to transform their vision into
-            action.
-          </p>
-          <div className="md:space-x-5 space-y-5 flex flex-col md:block sm:px-0 px-8">
-            <Link href="#contact" scroll className="scroll-smooth">
+          <div className="flex items-center justify-center md:flex md:justify-normal">
+            <p className="font-sfpro mb-16 mt-8 text-center md:text-left max-w-md lg:max-w-[430px]">
+              We support and enable entrepreneurs to transform their vision into
+              action.
+            </p>
+          </div>
+          <div className="space-y-5 md:space-y-0 flex flex-col md:space-x-2 md:flex-row sm:px-0 px-8">
+            <Link
+              href="#contact"
+              scroll
+              className="scroll-smooth w-full md:w-auto"
+            >
               <Button
                 variant="default"
                 className="font-sfpro h-[56px] md:w-[200px] w-full text-xl shadow-lg heroButton"
@@ -52,7 +58,7 @@ export default function Home() {
               </Button>
             </Link>
 
-            <Link href="#work" className="scroll-smooth">
+            <Link href="#work" className="scroll-smooth w-full md:w-auto">
               <Button
                 variant="secondary"
                 className="font-sfpro h-[56px] md:w-[200px] w-full text-xl shadow-sm"
@@ -65,7 +71,7 @@ export default function Home() {
 
         <div className="animate-magnet-fade-in md:absolute relative md:-right-1/4">
           <motion.img
-            className="4xl:w-[1800px] 3xl:w-[1600px] 2xl:w-[1400px] xl:w-[1200px] lg:w-[900px] md:w-[800px] w-[600px]"
+            className="4xl:w-[1800px] 3xl:w-[1600px] 2xl:w-[1400px] xl:w-[1200px] lg:w-[900px] md:w-[750px] w-[600px]"
             drag
             dragSnapToOrigin
             dragElastic={0.5}
