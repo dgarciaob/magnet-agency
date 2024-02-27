@@ -19,6 +19,18 @@ export const projects = [
     pathToPage: '/kuk',
   },
   {
+    id: 1,
+    name: 'Nous',
+    bgImg: '/images/NousCard.png',
+    alt: 'Nous Logo',
+    logoImg: '/images/logosaas.png',
+    descripcion:
+      'Software as a Service. Nous is an all-in-one app that helps psychologists organize their life and work.',
+    serviceType: 'Brand',
+    linkToWeb: 'https://www.behance.net/gallery/180826501/Brands-x-SPAW',
+    pathToPage: '/saas',
+  },
+  {
     id: 6,
     name: 'Interpreters UI',
     bgImg: '/images/IUIbg.png',
@@ -95,6 +107,7 @@ export const projects = [
     modalImgFive: '/images/spaw5.png',
     pathToPage: '/spaw',
   },
+
   // {
   //   id: 1,
   //   name: '(magnet)',
