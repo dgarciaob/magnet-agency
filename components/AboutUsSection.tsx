@@ -88,12 +88,12 @@ const AboutUsSection = () => {
         </div>
         <div
           className="absolute top-[52%] left-[4%] h-[25%] w-[25%]"
-          onMouseEnter={() => handleMouseEnter('Guille Zumarán')}
+          onMouseEnter={() => handleMouseEnter('Rodrigo García')}
           onMouseLeave={handleMouseLeave}
         >
           <Image
-            src="/images/4xzumi.png"
-            alt="Guille Zumarán"
+            src="/images/rg.png"
+            alt="Rodrigo García"
             fill
             className="object-contain"
           />
@@ -107,42 +107,6 @@ const AboutUsSection = () => {
           </motion.div>
         )}
       </div>
-
-      {/* <div className="md:flex md:flex-row md:space-y-0 justify-between flex flex-col items-center space-y-6 mt-20 mx-auto w-full max-w-screen-2xl px-4 lg:px-[70px]">
-        {team.map((founder) => {
-          return (
-            <div
-              key={founder.name}
-              className="relative overflow-x-hidden overflow-y-clip w-[310px] h-[410px] bg-white rounded-[25px]"
-            >
-              <Image
-                src={founder.image}
-                alt={founder.alt}
-                width={310}
-                height={310}
-                className="rounded-[25px] object-cover"
-              />
-
-              <div className="absolute bottom-0 w-full h-[25%] backdrop-blur-md rounded-b-[25px] px-4 pt-4">
-                <div className="flex flex-row items-center space-x-2">
-                  <h2 className="text-base font-sfprobold text-white">
-                    {founder.name}
-                  </h2>
-                  <span className="text-white">·</span>
-                  <p className="text-base font-sfpro text-white">
-                    {founder.role}
-                  </p>
-                </div>
-                <div>
-                  <p className="text-base font-sfpro text-white">
-                    {founder.phrase}
-                  </p>
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </div> */}
 
       <div className="mt-20 mx-auto w-full max-w-screen-2xl px-4 lg:px-[70px] flex flex-col space-y-6 items-center md:flex-row md:space-y-0 md:flex-wrap md:gap-6 md:justify-center md:items-center">
         <div className="relative rounded-[25px]">
@@ -205,8 +169,8 @@ const AboutUsSection = () => {
         </div>
         <div className="relative rounded-[25px]">
           <Image
-            src="/images/zumijpg.png"
-            alt="Guille Zumarán"
+            src="/images/rg.JPG"
+            alt="Rodrigo García"
             width={310}
             height={310}
             className="object-cover rounded-[25px] w-[310px] h-[350px]"
@@ -214,10 +178,10 @@ const AboutUsSection = () => {
           <div className="absolute bottom-0 w-full h-[15%] backdrop-blur-md rounded-b-[25px] px-4 pt-4">
             <div className="flex flex-row items-center space-x-2">
               <h2 className="text-base font-sfprobold text-white">
-                Guillermo Zumarán
+                Rodrigo García
               </h2>
               <span className="text-white">·</span>
-              <p className="text-base font-sfpro text-white">Senior Dev</p>
+              <p className="text-base font-sfpro text-white">Business Dev</p>
             </div>
           </div>
         </div>
